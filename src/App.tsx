@@ -8,7 +8,6 @@ import NoticePage from './pages/NoticePage/NoticePage';
 function App() {
   return (
     <div className="App">
-      <div className="bg-amber-300">Init</div>
       <Routes>
         <Route element={<HomePage />} path="/" />
         <Route element={<CenterInfoPage />} path="/CenterInfo" />
