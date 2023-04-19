@@ -18,7 +18,7 @@ function Header() {
         </Link>
       </div>
       <ul className="border-t border-b border-stone-950 pt-2 pb-2">
-        <div className="max-w-screen-xl flex justify-around mr-auto ml-auto">
+        <div className="max-w-7xl flex justify-around mr-auto ml-auto">
           <li className="font-semibold">
             <button>센터 안내</button>
           </li>
