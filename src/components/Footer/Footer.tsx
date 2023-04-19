@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="border-t">
-      <div className="mt-10 mb-10">
+      <div className="mt-6 mb-6">
         <div className="flex justify-center gap-32">
           <section>
             <h3 className="font-bold text-lg">소담다담 심리상담센터</h3>
@@ -65,7 +65,7 @@ function Footer() {
           </section>
         </div>
       </div>
-      <div className="flex justify-center items-center bg-gray-50 h-20 ">
+      <div className="flex justify-center items-center bg-gray-50 h-14 ">
         <span>© SODA. ALL RIGHTS RESERVED</span>
       </div>
     </footer>
