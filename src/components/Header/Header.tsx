@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import HeaderNavList from './HeaderNavList';
 
 function Header() {
   return (
@@ -19,18 +20,10 @@ function Header() {
       </div>
       <ul className="border-t border-b border-stone-950 pt-2 pb-2">
         <div className="max-w-7xl flex justify-around mr-auto ml-auto">
-          <li className="font-semibold">
-            <button>센터 안내</button>
-          </li>
-          <li className="font-semibold">
-            <button>상담전문가 소개</button>
-          </li>
-          <li className="font-semibold">
-            <button>프로그램 소개</button>
-          </li>
-          <li className="font-semibold">
-            <button>공지사항</button>
-          </li>
+          <HeaderNavList listName="센터 안내" />
+          <HeaderNavList listName="상담전문가 소개" />
+          <HeaderNavList listName="프로그램 소개" />
+          <HeaderNavList listName="공지사항" />
         </div>
       </ul>
     </header>
