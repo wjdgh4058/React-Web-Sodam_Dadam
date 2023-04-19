@@ -10,7 +10,7 @@ function Header() {
           <div className="flex flex-col items-center justify-center">
             <div className="flex">
               <p className="text-xl font-bold text-blue-900 mr-2">소담다담</p>
-              <p className="text-xl font-semibold text-gray-500">상담연구소</p>
+              <p className="text-xl font-semibold text-gray-500">심리상담센터</p>
             </div>
             <div>
               <p className="text-xs text-gray-400">SODA COUNSELING CENTER</p>

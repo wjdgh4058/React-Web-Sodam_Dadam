@@ -1,8 +1,10 @@
+import FooterInfoBtn from './FooterInfoBtn';
+
 function Footer() {
   return (
     <footer className="border-t">
-      <div className="mt-6 mb-6">
-        <div className="flex justify-center gap-32">
+      <div className="sm:mt-1 sm:mb-1 xl:mt-4 xl:mb-4">
+        <div className="sm:hidden xl:flex justify-center gap-32">
           <section>
             <h3 className="font-bold text-lg">소담다담 심리상담센터</h3>
             <ul>
@@ -64,8 +66,16 @@ function Footer() {
             </ul>
           </section>
         </div>
+        <div>
+          <ul className="sm:flex flex-nowrap justify-around max-w-3xl mr-auto ml-auto xl:hidden">
+            <FooterInfoBtn btnName="카카오톡 문의" />
+            <FooterInfoBtn btnName="1:1 문의" />
+            <FooterInfoBtn btnName="상세정보" />
+            <FooterInfoBtn btnName="계좌정보" />
+          </ul>
+        </div>
       </div>
-      <div className="flex justify-center items-center bg-gray-50 h-14 ">
+      <div className="flex justify-center items-center bg-gray-50 sm:text-sm sm:h-8 xl:text-base xl:h-10 ">
         <span>© SODA. ALL RIGHTS RESERVED</span>
       </div>
     </footer>
