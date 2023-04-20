@@ -67,7 +67,7 @@ function Footer() {
           </section>
         </div>
         <div>
-          <ul className="sm:flex flex-nowrap justify-around max-w-3xl mr-auto ml-auto xl:hidden">
+          <ul className="flex flex-nowrap justify-around max-w-3xl mr-auto ml-auto xl:hidden">
             <FooterInfoBtn btnName="카카오톡 문의" />
             <FooterInfoBtn btnName="1:1 문의" />
             <FooterInfoBtn btnName="상세정보" />
