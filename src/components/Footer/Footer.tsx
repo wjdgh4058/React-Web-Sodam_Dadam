@@ -3,8 +3,8 @@ import FooterInfoBtn from './FooterInfoBtn';
 function Footer() {
   return (
     <footer className="border-t">
-      <div className="sm:mt-1 sm:mb-1 xl:mt-4 xl:mb-4">
-        <div className="sm:hidden xl:flex justify-center gap-32">
+      <div className="mxl:mt-1 mxl:mb-1 mt-4 mb-4">
+        <div className="mxl:hidden flex justify-center gap-32">
           <section>
             <h3 className="font-bold text-lg">소담다담 심리상담센터</h3>
             <ul>
@@ -75,7 +75,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center bg-gray-50 sm:text-sm sm:h-8 xl:text-base xl:h-10 ">
+      <div className="flex justify-center items-center bg-gray-50 mxl:text-sm mxl:h-8 text-base h-10 ">
         <span>© SODA. ALL RIGHTS RESERVED</span>
       </div>
     </footer>
