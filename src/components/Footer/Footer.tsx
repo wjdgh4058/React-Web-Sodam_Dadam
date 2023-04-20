@@ -3,32 +3,32 @@ import FooterInfoBtn from './FooterInfoBtn';
 function Footer() {
   return (
     <footer className="border-t">
-      <div className="mxl:mt-1 mxl:mb-1 mt-4 mb-4">
-        <div className="mxl:hidden flex justify-center gap-32">
+      <div className="mt-4 mb-4 mxl:mt-1 mxl:mb-1">
+        <div className="flex justify-center gap-32 mxl:hidden">
           <section>
-            <h3 className="font-bold text-lg">소담다담 심리상담센터</h3>
+            <h3 className="text-lg font-bold">소담다담 심리상담센터</h3>
             <ul>
-              <li className="mb-6 mt-6">
-                <span className="font-bold text-xl mr-3">010-2331-4058</span>
+              <li className="mt-6 mb-6">
+                <span className="mr-3 text-xl font-bold">010-2331-4058</span>
                 <span>월~토요일 오전 9시 - 오후 6시</span>
               </li>
               <li className="flex">
-                <button className="border-2 w-28 h-12 mr-4 mb-4">카카오톡 문의</button>
+                <button className="h-12 mb-4 mr-4 border-2 w-28">카카오톡 문의</button>
                 <div>
                   <p className="flex">
                     <span className="text-gray-500">월~토요일</span>
-                    <span className="font-extralight text-gray-500">ㅣ</span>
+                    <span className="text-gray-500 font-extralight">ㅣ</span>
                     <span className="text-gray-500">오전 9시 - 오후 6시</span>
                   </p>
                   <p className="flex">
                     <span className="text-gray-500">일/공휴일</span>
-                    <span className="font-extralight text-gray-500">ㅣ</span>
+                    <span className="text-gray-500 font-extralight">ㅣ</span>
                     <span className="text-gray-500">오전 9시 - 오후 1시</span>
                   </p>
                 </div>
               </li>
               <li className="flex">
-                <button className="border-2 w-28 h-12 mr-4">1:1 문의</button>
+                <button className="h-12 mr-4 border-2 w-28">1:1 문의</button>
                 <div>
                   <p className="text-gray-500">365일</p>
                   <p className="text-gray-500">센터 운영시간에 순차적으로 답변 드리겠습니다.</p>
@@ -47,8 +47,8 @@ function Footer() {
                 <span className="text-gray-500">ㅣ</span>
                 <span className="text-gray-500">대표 : 권문희</span>
               </li>
-              <li className="text-gray-500 border-b block pb-4">팩스 : 010 - 2331 - 4058</li>
-              <li className="text-gray-500 mt-4">
+              <li className="block pb-4 text-gray-500 border-b">팩스 : 010 - 2331 - 4058</li>
+              <li className="mt-4 text-gray-500">
                 <span>계좌정보</span>
                 <div className="mt-2">
                   <span className="mr-7">예금주</span>
@@ -58,7 +58,7 @@ function Footer() {
                   <span className="mt-1 mr-4">입금은행</span>
                   <span>농협</span>
                 </div>
-                <div className="border-b pb-4 mt-1">
+                <div className="pb-4 mt-1 border-b">
                   <span className="mr-4">계좌번호</span>
                   <span>1109-12-244394</span>
                 </div>
@@ -67,7 +67,7 @@ function Footer() {
           </section>
         </div>
         <div>
-          <ul className="flex flex-nowrap justify-around max-w-3xl mr-auto ml-auto xl:hidden">
+          <ul className="flex justify-around max-w-3xl ml-auto mr-auto flex-nowrap xl:hidden">
             <FooterInfoBtn btnName="카카오톡 문의" />
             <FooterInfoBtn btnName="1:1 문의" />
             <FooterInfoBtn btnName="상세정보" />
@@ -75,7 +75,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center bg-gray-50 mxl:text-sm mxl:h-8 text-base h-10 ">
+      <div className="flex items-center justify-center h-10 text-base bg-gray-50 mxl:text-sm mxl:h-8 ">
         <span>© SODA. ALL RIGHTS RESERVED</span>
       </div>
     </footer>
