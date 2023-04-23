@@ -1,5 +1,5 @@
 function NavListCurrentLocation() {
-  return <div>NavListCurrentLocation</div>;
+  return <div className="flex items-end">NavListCurrentLocation</div>;
 }
 
 export default NavListCurrentLocation;
