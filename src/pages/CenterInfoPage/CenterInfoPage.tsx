@@ -25,6 +25,6 @@ const sodaInfoData: SodaInfoType = {
 };
 
 function CenterInfoPage() {
-  return <NavListContainer listData={centerInfoListData} itemData={sodaInfoData} />;
+  return <NavListContainer listData={centerInfoListData} sodaInfoData={sodaInfoData} />;
 }
 export default CenterInfoPage;
