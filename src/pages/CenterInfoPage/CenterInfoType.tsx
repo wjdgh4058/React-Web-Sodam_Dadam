@@ -13,3 +13,11 @@ export interface SodaInfoType {
   content: Array<string>;
   detailImg: Array<string>;
 }
+
+export interface ReservationInfoType {
+  title: string;
+}
+
+export interface DirectionInfoType {
+  title: string;
+}

@@ -1,5 +1,5 @@
 import NavListContainer from '../../components/NavList/NavListContainer';
-import { CenterInfoListDataType, SodaInfoType } from './CenterInfoType';
+import { CenterInfoListDataType, DirectionInfoType, ReservationInfoType, SodaInfoType } from './CenterInfoType';
 
 const centerInfoListData: CenterInfoListDataType = {
   listName: '센터 안내',
@@ -24,7 +24,22 @@ const sodaInfoData: SodaInfoType = {
   detailImg: ['', '', ''],
 };
 
+const reservationInfoData: ReservationInfoType = {
+  title: '상담예약 안내',
+};
+
+const directionInfoData: DirectionInfoType = {
+  title: '오시는 길',
+};
+
 function CenterInfoPage() {
-  return <NavListContainer listData={centerInfoListData} sodaInfoData={sodaInfoData} />;
+  return (
+    <NavListContainer
+      listData={centerInfoListData}
+      sodaInfoData={sodaInfoData}
+      reservationInfoData={reservationInfoData}
+      directionInfoData={directionInfoData}
+    />
+  );
 }
 export default CenterInfoPage;
