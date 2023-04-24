@@ -9,6 +9,7 @@ export interface SodaInfoType {
   title: string;
   headText: string;
   img: string;
+  alt: string;
   content: Array<string>;
   detailImg: Array<string>;
 }

@@ -11,7 +11,8 @@ const centerInfoListData: CenterInfoListDataType = {
 const sodaInfoData: SodaInfoType = {
   title: '소담다담 소개',
   headText: '소담다담 심리상담 센터는,',
-  img: '',
+  img: '../../../public/images/sodaInfoImg.jpg',
+  alt: '초록색 나뭇잎 이미지',
   content: [
     '삶을 살아가며 만나는 수많은 경험과 관계 속에서 우리가 마주하는 아픔에 대한 세심한 마음 채집활동을 통해 진짜 나를 만나기 위한 여정을 함께 하고자 합니다.',
     '소담다담은 경험적으로 검증된 다양한 상담 이론을 통합적으로 접근하여 일상적인 고민 및 학교, 직장, 가정생활 적응 등의 어려움을 나누고, 건강한 심리적 성장을 도모하는 과정을 함께 하고자 합니다.',
