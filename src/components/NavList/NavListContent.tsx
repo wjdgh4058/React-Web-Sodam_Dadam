@@ -1,9 +1,10 @@
+import { SodaInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
 import CenterInfoSodaIntroduction from '../CenterIntroductionContent/CenterInfoSodaIntroduction';
 import NavListCurrentLocation from './NavListCurrentLocation';
 
-function NavListContent({ itemData }: { itemData: Array<object> }) {
+function NavListContent({ itemData }: { itemData: SodaInfoType }) {
   const clicklist = '소담다담 소개';
-  const currentItem = itemData.filter((item) => item.title === clicklist)[0];
+  const currentItem = itemData;
 
   console.log('curentItem = ', currentItem);
   return (
