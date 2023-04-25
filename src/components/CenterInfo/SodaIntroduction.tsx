@@ -17,10 +17,22 @@ function SodaIntroduction({ sodaData }: { sodaData: SodaInfoType }) {
           );
         })}
       </ul>
-      <div className="flex justify-between mb-12">
-        <div className="bg-gray-400 w-80 h-80">이미지1</div>
-        <div className="bg-gray-400 w-80 h-80">이미지2</div>
-        <div className="bg-gray-400 w-80 h-80">이미지3</div>
+      <div className="flex justify-between gap-4 mb-12 m2xl:flex-col m2xl:items-center ">
+        <img
+          src="../../../public/images/centerImg1.jpeg"
+          alt=""
+          className="max-w-xs m2xl:max-w-4xl m2xl:max-h-4xl max-h-xs w-[100%]"
+        />
+        <img
+          src="../../../public/images/centerImg2.jpeg"
+          alt=""
+          className="max-w-xs m2xl:max-w-4xl m2xl:max-h-4xl max-h-xs w-[100%]"
+        />
+        <img
+          src="../../../public/images/centerImg3.jpeg"
+          alt=""
+          className="max-w-xs m2xl:max-w-4xl m2xl:max-h-4xl max-h-xs w-[100%]"
+        />
       </div>
     </div>
   );

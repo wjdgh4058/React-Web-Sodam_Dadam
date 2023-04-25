@@ -24,7 +24,7 @@ function NavListContainer({
   return (
     <div className="flex flex-col">
       <img src={listData.listImg} alt={listData.listImgAlt} className="mt-14" />
-      <div className="flex gap-[5%] ml-[12%] mr-[12%] mt-[5%]">
+      <div className="flex gap-[5%] ml-[12%] mr-[12%] mt-[5%] mxl:flex-col">
         <NavListItemMenu
           listData={listData}
           sodaInfoData={sodaInfoData}
