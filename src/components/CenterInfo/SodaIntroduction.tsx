@@ -17,21 +17,21 @@ function SodaIntroduction({ sodaData }: { sodaData: SodaInfoType }) {
           );
         })}
       </ul>
-      <div className="flex justify-between gap-4 mb-12 m2xl:flex-col m2xl:items-center ">
+      <div className="flex justify-between gap-4 mb-12 mxl:flex-col mxl:items-center ">
         <img
           src="../../../public/images/centerImg1.jpeg"
           alt=""
-          className="max-w-xs m2xl:max-w-4xl m2xl:max-h-4xl max-h-xs w-[100%]"
+          className="max-w-[30%] mxl:max-w-4xl mxl:max-h-4xl max-h-xs w-[100%]"
         />
         <img
           src="../../../public/images/centerImg2.jpeg"
           alt=""
-          className="max-w-xs m2xl:max-w-4xl m2xl:max-h-4xl max-h-xs w-[100%]"
+          className="max-w-[30%] mxl:max-w-4xl mxl:max-h-4xl max-h-xs w-[100%]"
         />
         <img
           src="../../../public/images/centerImg3.jpeg"
           alt=""
-          className="max-w-xs m2xl:max-w-4xl m2xl:max-h-4xl max-h-xs w-[100%]"
+          className="max-w-[30%] mxl:max-w-4xl mxl:max-h-4xl max-h-xs w-[100%]"
         />
       </div>
     </div>
