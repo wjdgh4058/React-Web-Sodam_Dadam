@@ -1,6 +1,6 @@
 import { SodaInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
 
-function CenterInfoSodaIntroduction({ sodaData }: { sodaData: SodaInfoType }) {
+function SodaIntroduction({ sodaData }: { sodaData: SodaInfoType }) {
   // console.log(sodaData);
   return (
     <div>
@@ -25,4 +25,4 @@ function CenterInfoSodaIntroduction({ sodaData }: { sodaData: SodaInfoType }) {
     </div>
   );
 }
-export default CenterInfoSodaIntroduction;
+export default SodaIntroduction;

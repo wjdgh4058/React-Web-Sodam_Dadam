@@ -1,5 +1,5 @@
 import { DirectionInfoType, ReservationInfoType, SodaInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
-import CenterInfoSodaIntroduction from '../CenterIntroductionContent/CenterInfoSodaIntroduction';
+import SodaIntroduction from '../CenterInfo/SodaIntroduction';
 import NavListCurrentLocation from './NavListCurrentLocation';
 
 function NavListContent({ itemData }: { itemData: SodaInfoType | ReservationInfoType | DirectionInfoType }) {
@@ -9,7 +9,7 @@ function NavListContent({ itemData }: { itemData: SodaInfoType | ReservationInfo
         <div className="text-3xl">{itemData.title}</div>
         <NavListCurrentLocation />
       </div>
-      {itemData.title === '소담다담 소개' ? <CenterInfoSodaIntroduction sodaData={itemData} /> : null}
+      {itemData.title === '소담다담 소개' ? <SodaIntroduction sodaData={itemData} /> : null}
     </div>
   );
 }
