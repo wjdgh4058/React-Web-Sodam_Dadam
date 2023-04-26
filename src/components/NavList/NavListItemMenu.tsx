@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   CenterInfoListDataType,
   DirectionInfoType,
@@ -19,13 +20,17 @@ function NavListItemMenu({
   getCurrentItem: React.Dispatch<React.SetStateAction<SodaInfoType | ReservationInfoType | DirectionInfoType>>;
 }) {
   const listItem = listData.listItem;
+  const [clickItemName, getClickItemName] = useState('소담다담 소개');
   const clickItem = (listName: string) => {
     if (listName === '소담다담 소개') {
       getCurrentItem(sodaInfoData);
+      getClickItemName(listName);
     } else if (listName === '상담예약 안내') {
       getCurrentItem(reservationInfoData);
+      getClickItemName(listName);
     } else if (listName === '오시는 길') {
       getCurrentItem(directionInfoData);
+      getClickItemName(listName);
     }
   };
   return (
@@ -37,7 +42,9 @@ function NavListItemMenu({
         {listItem.map((list) => {
           return (
             <button
-              className="pt-4 pb-4 pl-6 text-lg text-left transition duration-500 ease-in-out border-b w-60 mxl:pt-2 mxl:pb-2 mxl:w-28 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800"
+              className={`${
+                clickItemName === list ? 'bg-gray-100 text-blue-800' : 'bg-inherit'
+              } pt-4 pb-4 pl-6 text-lg text-left transition duration-500 ease-in-out border-b w-60 mxl:pt-2 mxl:pb-2 mxl:w-28 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800`}
               key={list}
               onClick={() => clickItem(list)}>
               {list}
