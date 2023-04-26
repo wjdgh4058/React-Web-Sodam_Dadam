@@ -37,7 +37,7 @@ function NavListItemMenu({
         {listItem.map((list) => {
           return (
             <button
-              className="pt-4 pb-4 pl-6 text-lg text-left border-b w-60 mxl:pt-2 mxl:pb-2 mxl:w-28 mxl:text-center mxl:pl-0 mxl:border-b-0"
+              className="pt-4 pb-4 pl-6 text-lg text-left transition duration-500 ease-in-out border-b w-60 mxl:pt-2 mxl:pb-2 mxl:w-28 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800"
               key={list}
               onClick={() => clickItem(list)}>
               {list}
