@@ -21,7 +21,11 @@ const sodaInfoData: SodaInfoType = {
     '소담다담은 국내 최고의 상담 관련 학회인 한국상담심리학회(한국심리학회 산하)의  공인 자격을 갖춘(상담심리전문가, 1급, 주수련감독자) 박사급 상담심리사가 직접 심리상담을 진행합니다. 상담 효과가 경험적으로 검증된 정신역동적 접근, 인지행동적 접근, 게슈탈트 접근, 인간중심접근 등을 통합적으로 적용하여 전문적인 심리상담을 실시합니다.',
     '소담다담은 한국상담심리학회의 상담심리사 윤리강령을 준수하며, 내담자와 상담자의 상호간 인간적이며 전문적인 신뢰관계를 중시합니다. 아울러 내담자와 상담자 모두의 인격적인 존중을 바탕으로 상담을 진행합니다.',
   ],
-  detailImg: ['', '', ''],
+  detailImg: [
+    '../../../public/images/centerImg1.jpeg',
+    '../../../public/images/centerImg2.jpeg',
+    '../../../public/images/centerImg3.jpeg',
+  ],
 };
 
 const reservationInfoData: ReservationInfoType = {
