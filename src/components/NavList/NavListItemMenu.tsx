@@ -38,7 +38,7 @@ function NavListItemMenu({
       <div className="pt-12 pb-12 text-2xl text-center text-white bg-blue-800 whitespace-nowrap w-60 mxl:text-lg mxl:pt-2 mxl:pb-2 mxl:w-40 mxl:pr-4 mxl:pl-4">
         {listData.listName}
       </div>
-      <div className="flex flex-col w-60 mxl:flex-row mxl:w-[100%] mxl:justify-between ">
+      <div className="flex flex-col w-60 mxl:flex-row mxl:w-[100%] mxl:justify-around ">
         {listItem.map((list) => {
           return (
             <button
