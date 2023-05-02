@@ -16,12 +16,14 @@ export interface SodaInfoType {
 
 export interface ReservationInfoType {
   title: string;
-  reservation: Array<{
-    img: string;
-    step: number;
-    stepName: string;
-    stepInfo: string;
-  }>;
+  reservation: Array<reservation>;
+}
+
+export interface reservation {
+  img: string;
+  step: number;
+  stepName: string;
+  stepInfo: string;
 }
 
 export interface DirectionInfoType {

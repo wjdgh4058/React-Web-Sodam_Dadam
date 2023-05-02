@@ -4,6 +4,7 @@ import SodaIntroduction from '../CenterInfo/SodaIntroduction';
 import NavListCurrentLocation from './NavListCurrentLocation';
 
 function NavListContent({ itemData }: { itemData: SodaInfoType | ReservationInfoType | DirectionInfoType }) {
+  console.log(itemData);
   return (
     <div className="flex flex-col w-[100%]">
       <div className="flex justify-between pb-4 border-b-2">
