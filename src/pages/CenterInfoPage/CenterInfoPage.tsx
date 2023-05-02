@@ -30,6 +30,38 @@ const sodaInfoData: SodaInfoType = {
 
 const reservationInfoData: ReservationInfoType = {
   title: '상담예약 안내',
+  reservation: [
+    {
+      img: '../../../public/images/Reservation.png',
+      step: 1,
+      stepName: '상담 예약',
+      stepInfo: '홈페이지 및 전화를 통해 상담일정 예약 – 최종일정 확인 – 예약 완료',
+    },
+    {
+      img: '../../../public/images/firstCounseling.png',
+      step: 2,
+      stepName: '초기 상담',
+      stepInfo: '주 호소문제 확인, 심리상담/심리치료 과정 안내',
+    },
+    {
+      img: '../../../public/images/counselingTest.png',
+      step: 3,
+      stepName: '심리검사(선택 사항)',
+      stepInfo: '심리검사를 통한 다차원적이고 객관적인 심리분석',
+    },
+    {
+      img: '../../../public/images/deepCounseling.png',
+      step: 4,
+      stepName: '심층상담/치료',
+      stepInfo: '체계적이고 심층적인 심리상담/심리치료 진행',
+    },
+    {
+      img: '../../../public/images/counselingFinish.png',
+      step: 5,
+      stepName: '상담/치료 종결',
+      stepInfo: '심리상담/치료 종결 및 사후관리 안내',
+    },
+  ],
 };
 
 const directionInfoData: DirectionInfoType = {
