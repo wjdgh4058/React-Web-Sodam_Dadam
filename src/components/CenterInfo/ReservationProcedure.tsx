@@ -1,7 +1,6 @@
-import { reservation } from '../../pages/CenterInfoPage/CenterInfoType';
+import { IReservation } from '../../pages/CenterInfoPage/CenterInfoType';
 
-function ReservationProcedure({ procedureData }: { procedureData: reservation }) {
-  console.log(procedureData);
+function ReservationProcedure({ procedureData }: { procedureData: IReservation }) {
   return (
     <div className="flex pb-5 mb-5 border-b-2">
       <div>

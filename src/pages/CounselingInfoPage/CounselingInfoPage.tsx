@@ -1,4 +1,10 @@
+import QuickMenuBar from '../../components/QuickMenuBar/QuickMenuBar';
+
 function CounselingInfoPage() {
-  return <div>CounselingInfoPage</div>;
+  return (
+    <div>
+      <QuickMenuBar />
+    </div>
+  );
 }
 export default CounselingInfoPage;
