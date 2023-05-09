@@ -1,31 +1,83 @@
-import { ReservationInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
+import { IReservationInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
 import CounselingTimeTableTd from './CounselingTimeTableTd';
 import CounselingTimeTableTh from './CounselingTimeTableTh';
 import ReservationProcedure from './ReservationProcedure';
 
-function ReservationInfo({ reservationData }: { reservationData: ReservationInfoType }) {
+const reservationInfoData: IReservationInfoType = {
+  title: '상담예약 안내',
+  reservation: [
+    {
+      img: '../../../public/images/Reservation.png',
+      step: 1,
+      stepName: '상담 예약',
+      stepInfo: '홈페이지 및 전화를 통해 상담일정 예약 – 최종일정 확인 – 예약 완료',
+    },
+    {
+      img: '../../../public/images/firstCounseling.png',
+      step: 2,
+      stepName: '초기 상담',
+      stepInfo: '주 호소문제 확인, 심리상담/심리치료 과정 안내',
+    },
+    {
+      img: '../../../public/images/counselingTest.png',
+      step: 3,
+      stepName: '심리검사(선택 사항)',
+      stepInfo: '심리검사를 통한 다차원적이고 객관적인 심리분석',
+    },
+    {
+      img: '../../../public/images/deepCounseling.png',
+      step: 4,
+      stepName: '심층상담/치료',
+      stepInfo: '체계적이고 심층적인 심리상담/심리치료 진행',
+    },
+    {
+      img: '../../../public/images/counselingFinish.png',
+      step: 5,
+      stepName: '상담/치료 종결',
+      stepInfo: '심리상담/치료 종결 및 사후관리 안내',
+    },
+  ],
+  counselingTime: [
+    {
+      name: '개인상담',
+      time: '50분',
+    },
+    {
+      name: '부부/커플/가족 상담',
+      time: '70분',
+    },
+    {
+      name: '심리검사',
+      time: '종류에 따라 상이',
+    },
+    {
+      name: '집단상담',
+      time: '1회당 2시간',
+    },
+  ],
+};
+
+function ReservationInfo() {
   return (
     <div className="flex flex-col">
       <div className="mt-12 mb-12 text-xl mmd:text-lg mmd:mt-6 mmd:mb-6">◦ 예약 절차</div>
-      {reservationData.reservation.map((item, index) => {
+      {reservationInfoData.reservation.map((item, index) => {
         return <ReservationProcedure procedureData={item} key={index} />;
       })}
       <div className="mt-10 mb-8 text-xl mmd:text-lg mmd:mt-6 mmd:mb-6">◦ SODA 상담시간</div>
       <table className="mb-8 border-2">
         <thead>
           <tr className="bg-gray-50">
-            <CounselingTimeTableTh thText="개인상담" />
-            <CounselingTimeTableTh thText="부부/커플/가족 상담" />
-            <CounselingTimeTableTh thText="심리검사" />
-            <CounselingTimeTableTh thText="집단상담" />
+            {reservationInfoData.counselingTime.map((item) => {
+              return <CounselingTimeTableTh thText={item.name} />;
+            })}
           </tr>
         </thead>
         <tbody>
           <tr>
-            <CounselingTimeTableTd tdText="50분" />
-            <CounselingTimeTableTd tdText="70분" />
-            <CounselingTimeTableTd tdText="종류에 따라 상이" />
-            <CounselingTimeTableTd tdText="1회당 2시간" />
+            {reservationInfoData.counselingTime.map((item) => {
+              return <CounselingTimeTableTd tdText={item.time} />;
+            })}
           </tr>
         </tbody>
       </table>
