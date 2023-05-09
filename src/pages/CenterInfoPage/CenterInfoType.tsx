@@ -1,11 +1,11 @@
-export interface CenterInfoListDataType {
+export interface ICenterInfoListDataType {
   listName: string;
   listItem: Array<string>;
   listImg: string;
   listImgAlt: string;
 }
 
-export interface SodaInfoType {
+export interface ISodaInfoType {
   title: string;
   headText: string;
   img: string;
@@ -14,18 +14,30 @@ export interface SodaInfoType {
   detailImg: Array<string>;
 }
 
-export interface ReservationInfoType {
+export interface IReservationInfoType {
   title: string;
-  reservation: Array<reservation>;
+  reservation: Array<IReservation>;
+  counselingTime: Array<ICounselingTimeType>;
+}
+export interface ICounselingTimeType {
+  name: string;
+  time: string;
 }
 
-export interface reservation {
+export interface IReservation {
   img: string;
   step: number;
   stepName: string;
   stepInfo: string;
 }
 
-export interface DirectionInfoType {
+export interface IDirectionInfoType {
   title: string;
+}
+
+export interface INavListItemMenuType {
+  listName: string;
+  listItem: Array<string>;
+  currentItem: string;
+  setCurrentItem: React.Dispatch<React.SetStateAction<string>>;
 }

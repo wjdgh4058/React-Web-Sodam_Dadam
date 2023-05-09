@@ -68,15 +68,15 @@ function ReservationInfo() {
       <table className="mb-8 border-2">
         <thead>
           <tr className="bg-gray-50">
-            {reservationInfoData.counselingTime.map((item) => {
-              return <CounselingTimeTableTh thText={item.name} />;
+            {reservationInfoData.counselingTime.map((item, index) => {
+              return <CounselingTimeTableTh thText={item.name} key={index} />;
             })}
           </tr>
         </thead>
         <tbody>
           <tr>
-            {reservationInfoData.counselingTime.map((item) => {
-              return <CounselingTimeTableTd tdText={item.time} />;
+            {reservationInfoData.counselingTime.map((item, index) => {
+              return <CounselingTimeTableTd tdText={item.time} key={index} />;
             })}
           </tr>
         </tbody>
