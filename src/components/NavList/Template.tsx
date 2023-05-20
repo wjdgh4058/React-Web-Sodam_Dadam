@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ICenterInfoListDataType } from '../../pages/CenterInfoPage/CenterInfoType';
 import NavListContent from './NavListContent';
 import NavListItemMenu from './NavListItemMenu';
@@ -15,19 +14,12 @@ const centerInfoListData: ICenterInfoListDataType = {
 const currentList = centerInfoListData;
 
 function Template() {
-  const [currentItem, setCurrentItem] = useState(currentList.listItem[0]);
-
   return (
     <div className="flex flex-col">
       <img src={currentList.listImg} alt={currentList.listImgAlt} />
       <div className="flex gap-[5%] ml-[12%] mr-[12%] mt-[5%] mxl:flex-col">
-        <NavListItemMenu
-          listName={currentList.listName}
-          listItem={currentList.listItem}
-          currentItem={currentItem}
-          setCurrentItem={setCurrentItem}
-        />
-        <NavListContent itemData={currentItem} />
+        <NavListItemMenu listName={currentList.listName} listItem={currentList.listItem} />
+        <NavListContent itemData={currentList.listItem} />
       </div>
     </div>
   );

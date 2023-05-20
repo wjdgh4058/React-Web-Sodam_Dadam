@@ -4,12 +4,12 @@ import NavListCurrentLocation from './NavListCurrentLocation';
 import SodaWayToCome from '../CenterInfo/SodaWayToCome';
 import { useParams } from 'react-router-dom';
 
-function NavListContent({ itemData }: { itemData: string }) {
+function NavListContent({ itemData }: { itemData: Array<string> }) {
   const { id } = useParams<{ id: string }>();
   return (
     <div className="flex flex-col w-[100%]">
       <div className="flex justify-between pb-4 border-b-2">
-        <div className="xl:text-3xl mxl:text-2xl">{itemData}</div>
+        <div className="xl:text-3xl mxl:text-2xl">{itemData[Number(id) - 1]}</div>
         <NavListCurrentLocation />
       </div>
       {id === '1' && <SodaIntroduction />}

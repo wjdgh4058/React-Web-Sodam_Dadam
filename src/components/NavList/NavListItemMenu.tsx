@@ -1,16 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { INavListItemMenuType } from '../../pages/CenterInfoPage/CenterInfoType';
 
-function NavListItemMenu({ listName, listItem, setCurrentItem }: INavListItemMenuType) {
-  const clickItem = (Item: string) => {
-    if (Item === '소담다담 소개') {
-      setCurrentItem(Item);
-    } else if (Item === '상담예약 안내') {
-      setCurrentItem(Item);
-    } else if (Item === '오시는 길') {
-      setCurrentItem(Item);
-    }
-  };
+function NavListItemMenu({ listName, listItem }: INavListItemMenuType) {
   const { id } = useParams<{ id: string }>();
 
   return (
@@ -26,7 +17,6 @@ function NavListItemMenu({ listName, listItem, setCurrentItem }: INavListItemMen
                 Number(id) === index + 1 ? 'xl:bg-gray-100 text-blue-800' : 'bg-inherit'
               } pt-4 pb-4 pl-6 text-lg text-left transition duration-500 ease-in-out border-b mxl:pt-2 mxl:pb-2 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800 mmd:text-base`}
               key={list}
-              onClick={() => clickItem(list)}
               to={`/CenterInfo/${index + 1}`}>
               {list}
             </Link>
