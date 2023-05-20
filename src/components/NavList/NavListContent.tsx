@@ -12,6 +12,7 @@ function NavListContent({ itemData }: { itemData: Array<string> }) {
         <div className="xl:text-3xl mxl:text-2xl">{itemData[Number(id) - 1]}</div>
         <NavListCurrentLocation />
       </div>
+      {/* 1,2,3 다른 페이지 데이터 받을시 수정 필요 */}
       {id === '1' && <SodaIntroduction />}
       {id === '2' && <ReservationInfo />}
       {id === '3' && <SodaWayToCome />}
