@@ -11,6 +11,7 @@ const centerInfoListData: ICenterInfoListDataType = {
 };
 
 // 추후에 헤더에서 클릭시 상태 변화 이벤트에 의해 변하게 수정해야함
+// url 에 따라 데이터 요청해서 사용하면 될듯
 const currentList = centerInfoListData;
 
 function Template() {
