@@ -19,7 +19,7 @@ function HeaderNavList({ headerList, menuVisible }: { headerList: IListType; men
               <Link
                 to={`${headerList.link}/${index + 1}`}
                 key={index}
-                className="p-1 ml-auto mr-auto text-lg font-normal text-white hover:text-blue-700 hover:border-b hover:text-xl">
+                className="p-1 ml-auto mr-auto text-lg font-normal text-white hover:text-blue-700 hover:border-b hover:text-xl mxl:hover:text-lg mxl:text-base">
                 {list}
               </Link>
             );
