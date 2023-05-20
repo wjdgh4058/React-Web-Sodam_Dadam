@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import { IListType } from './HeaderType';
-// import { useState } from 'react';
 
 function HeaderNavList({ headerList, menuVisible }: { headerList: IListType; menuVisible: boolean }) {
-  // const [hoveredItem, setHoveredItem] = useState(null);
-
   return (
     <li className="relative text-xl font-medium mxl:text-base basis-3/12">
       <Link
