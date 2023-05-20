@@ -18,7 +18,7 @@ function Template() {
 
   return (
     <div className="flex flex-col">
-      <img src={currentList.listImg} alt={currentList.listImgAlt} className="mt-14" />
+      <img src={currentList.listImg} alt={currentList.listImgAlt} />
       <div className="flex gap-[5%] ml-[12%] mr-[12%] mt-[5%] mxl:flex-col">
         <NavListItemMenu
           listName={currentList.listName}
