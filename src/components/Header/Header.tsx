@@ -53,7 +53,7 @@ function Header() {
         </Link>
       </div>
       <ul
-        className="z-50 pt-2 pb-2 border-t border-b border-stone-950 mb-14"
+        className="pt-2 pb-2 border-t border-b border-stone-950 mb-14"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         <div className="relative flex ml-auto mr-auto max-w-7xl">
@@ -64,7 +64,7 @@ function Header() {
         <div
           className={`absolute w-full mt-2 bg-blue-500 ${
             menuVisible ? 'h-40' : 'h-0'
-          } transition-height duration-[400ms] ease-in-out overflow-hidden`}></div>
+          } transition-height duration-[400ms] ease-in-out overflow-hidden z-10`}></div>
       </ul>
     </header>
   );
