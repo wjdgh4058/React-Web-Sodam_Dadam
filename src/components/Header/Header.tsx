@@ -1,32 +1,35 @@
 import { Link } from 'react-router-dom';
 import HeaderNavList from './HeaderNavList';
-import { IHeaderType } from './HeaderType';
 import { useState } from 'react';
+import { IHeaderType } from './HeaderType';
 
-const headerListData: IHeaderType = {
-  headerList: [
-    {
-      name: '센터안내',
-      list: ['소담다담 소개', '상담예약 안내', '오시는 길'],
-      link: '/CenterInfo',
-    },
-    {
-      name: '상담전문가 소개',
-      list: ['상담심리전문가', '전임 상담원'],
-      link: '/CounselingInfo',
-    },
-    {
-      name: '프로그램 소개',
-      list: ['개인상담', '심리 검사', '상담자 교육'],
-      link: '/ProgramInfo',
-    },
-    {
-      name: '공지 ・ 문의',
-      list: ['교육/워크숍 공지', '이벤트', '문의'],
-      link: '/Notice',
-    },
-  ],
-};
+const headerListData: Array<IHeaderType> = [
+  {
+    name: '센터안내',
+    list: ['소담다담 소개', '상담예약 안내', '오시는 길'],
+    link: '/CenterInfo',
+  },
+  {
+    name: '상담전문가 소개',
+    list: ['상담심리전문가', '전임 상담원'],
+    link: '/CounselingInfo',
+  },
+  {
+    name: '심리상담',
+    list: ['개인상담', '심리검사', '집단상담'],
+    link: '/Counseling',
+  },
+  {
+    name: '심리교육',
+    list: ['특강 및 워크숍', '상담자 교육', '북리딩 세미나'],
+    link: '/Education',
+  },
+  {
+    name: '공지 ・ 문의',
+    list: ['교육/워크숍 공지', '이벤트', '문의'],
+    link: '/Notice',
+  },
+];
 
 function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -57,7 +60,7 @@ function Header() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         <div className="relative flex ml-auto mr-auto max-w-7xl">
-          {headerListData.headerList.map((item, index) => (
+          {headerListData.map((item, index) => (
             <HeaderNavList headerList={item} key={index} menuVisible={menuVisible} />
           ))}
         </div>
