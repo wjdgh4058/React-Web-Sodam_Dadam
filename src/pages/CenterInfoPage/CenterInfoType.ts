@@ -1,10 +1,3 @@
-export interface ICenterInfoListDataType {
-  listName: string;
-  listItem: Array<string>;
-  listImg: string;
-  listImgAlt: string;
-}
-
 export interface ISodaInfoType {
   title: string;
   headText: string;
