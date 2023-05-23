@@ -12,7 +12,7 @@ const headerListData: Array<IHeaderType> = [
   {
     name: '상담전문가 소개',
     list: ['상담심리전문가', '전임 상담원'],
-    link: '/CounselingInfo',
+    link: '/CounselorInfo',
   },
   {
     name: '심리상담',
