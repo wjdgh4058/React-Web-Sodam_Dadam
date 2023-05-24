@@ -30,7 +30,7 @@ function SodaIntroduction() {
       <ul>
         {sodaInfoData.content.map((item, index) => {
           return (
-            <li key={index} className="mb-12 text-xl mxl:text-lg">
+            <li key={index} className="mb-12 text-2xl mxl:text-xl">
               • {item}
             </li>
           );

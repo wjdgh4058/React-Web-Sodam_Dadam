@@ -15,7 +15,7 @@ function NavListItemMenu({ listName, listItem, url }: INavListItemMenuType) {
             <Link
               className={`${
                 Number(id) === index + 1 ? 'xl:bg-gray-100 text-blue-800' : 'bg-inherit'
-              } pt-4 pb-4 pl-6 text-lg text-left transition duration-500 ease-in-out border-b mxl:pt-2 mxl:pb-2 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800 mmd:text-base`}
+              } pt-4 pb-4 pl-6 text-xl text-left transition duration-500 ease-in-out border-b mxl:pt-2 mxl:pb-2 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800 mmd:text-base`}
               key={list}
               to={`${url}/${index + 1}`}>
               {list}
