@@ -1,4 +1,6 @@
+import Template from '../../components/NavList/Template';
+
 function CounselingPage() {
-  return <div>CounselingPage</div>;
+  return <Template />;
 }
 export default CounselingPage;

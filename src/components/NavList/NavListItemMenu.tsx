@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { INavListItemMenuType } from '../../pages/CenterInfoPage/CenterInfoType';
 
-function NavListItemMenu({ listName, listItem }: INavListItemMenuType) {
+function NavListItemMenu({ listName, listItem, url }: INavListItemMenuType) {
   const { id } = useParams<{ id: string }>();
 
   return (
@@ -17,7 +17,7 @@ function NavListItemMenu({ listName, listItem }: INavListItemMenuType) {
                 Number(id) === index + 1 ? 'xl:bg-gray-100 text-blue-800' : 'bg-inherit'
               } pt-4 pb-4 pl-6 text-lg text-left transition duration-500 ease-in-out border-b mxl:pt-2 mxl:pb-2 mxl:text-center mxl:pl-0 mxl:border-b-0 xl:hover:bg-gray-100 hover:text-blue-800 mmd:text-base`}
               key={list}
-              to={`/CenterInfo/${index + 1}`}>
+              to={`${url}/${index + 1}`}>
               {list}
             </Link>
           );

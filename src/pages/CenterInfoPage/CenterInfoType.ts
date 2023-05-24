@@ -29,6 +29,7 @@ export interface IDirectionInfoType {
 }
 
 export interface INavListItemMenuType {
+  url: string;
   listName: string;
   listItem: Array<string>;
 }

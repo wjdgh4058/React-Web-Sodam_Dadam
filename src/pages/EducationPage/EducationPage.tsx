@@ -1,4 +1,6 @@
+import Template from '../../components/NavList/Template';
+
 function EducationPage() {
-  return <div>EducationPage</div>;
+  return <Template />;
 }
 export default EducationPage;
