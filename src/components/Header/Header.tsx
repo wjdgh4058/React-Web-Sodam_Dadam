@@ -71,13 +71,13 @@ function Header() {
           <div className="flex ml-auto mr-auto max-w-screen-2xl">
             {headerListData.map((item, index) => {
               return (
-                <div className="inset-x-0 z-20 flex flex-col h-0 gap-2 mt-5 basis-1/5" key={index}>
+                <div className="inset-x-0 z-20 flex flex-col h-0 gap-2 mt-4 basis-1/5" key={index}>
                   {item.list.map((listName, index) => {
                     return (
                       <Link
                         to={`${item.link}/${index + 1}`}
                         key={index}
-                        className="flex justify-center p-1 ml-auto mr-auto text-xl font-normal text-white transition duration-300 ease-in-out hover:text-blue-700 hover:border-b hover:text-2xl mxl:hover:text-base mxl:text-base">
+                        className="flex justify-center p-1 ml-auto mr-auto text-xl font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b hover:text-2xl mxl:hover:text-base mxl:text-base">
                         {listName}
                       </Link>
                     );
