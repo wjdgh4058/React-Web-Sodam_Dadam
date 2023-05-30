@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import { IHeaderType } from './HeaderType';
+import { INavListDataType } from '../NavList/NavListType';
 
-function HeaderNavList({ headerList }: { headerList: IHeaderType }) {
+function HeaderNavList({ headerList }: { headerList: INavListDataType }) {
   return (
     <li className="text-2xl mxl:text-lg basis-1/5 ">
       <Link
         className="flex justify-center transition duration-500 ease-in-out pr-auto pl-auto hover:text-blue-800"
-        to={`${headerList.link}/1`}>
-        {headerList.name}
+        to={`${headerList.url}/1`}>
+        {headerList.listName}
       </Link>
     </li>
   );
