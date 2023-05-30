@@ -1,4 +1,4 @@
-import { ISodaInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
+import { ISodaInfoType } from './CenterInfoType';
 
 const sodaInfoData: ISodaInfoType = {
   title: '소담다담 소개',

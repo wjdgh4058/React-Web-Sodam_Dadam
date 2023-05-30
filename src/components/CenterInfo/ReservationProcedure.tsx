@@ -1,4 +1,4 @@
-import { IReservation } from '../../pages/CenterInfoPage/CenterInfoType';
+import { IReservation } from './CenterInfoType';
 
 function ReservationProcedure({ procedureData }: { procedureData: IReservation }) {
   return (
