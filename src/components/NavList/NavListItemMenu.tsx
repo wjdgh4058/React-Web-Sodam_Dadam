@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { INavListItemMenuType } from '../../pages/CenterInfoPage/CenterInfoType';
+import { INavListItemMenuType } from '../CenterInfo/CenterInfoType';
 
 function NavListItemMenu({ listName, listItem, url }: INavListItemMenuType) {
   const { id } = useParams<{ id: string }>();
