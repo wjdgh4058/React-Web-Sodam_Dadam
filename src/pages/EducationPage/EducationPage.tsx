@@ -1,6 +1,6 @@
 import Template from '../../components/NavList/Template';
 
-function NoticePage() {
+function EducationPage() {
   return <Template />;
 }
-export default NoticePage;
+export default EducationPage;

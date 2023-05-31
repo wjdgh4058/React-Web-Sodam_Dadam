@@ -1,8 +1,26 @@
-export interface ICenterInfoListDataType {
-  listName: string;
-  listItem: Array<string>;
-  listImg: string;
-  listImgAlt: string;
+export interface ISodaSubBoxType {
+  name: string;
+  children: React.ReactNode;
+  img: string;
+}
+
+export interface IWayToComeResponseType {
+  title: string;
+  wayToComeName: string;
+  wayToComeImg: string;
+  wayToComeFirstLocation: string;
+  wayToComesecondLocation: string;
+  callName: string;
+  callImg: string;
+  callContent: string;
+  infomationUseName: string;
+  infomationImg: string;
+  reservationImg: string;
+  reservationName: string;
+  internetImg: string;
+  internetName: string;
+  parkinginfoName: string;
+  parkinginfoContent: string;
 }
 
 export interface ISodaInfoType {
@@ -31,13 +49,8 @@ export interface IReservation {
   stepInfo: string;
 }
 
-export interface IDirectionInfoType {
-  title: string;
-}
-
 export interface INavListItemMenuType {
+  url: string;
   listName: string;
   listItem: Array<string>;
-  currentItem: string;
-  setCurrentItem: React.Dispatch<React.SetStateAction<string>>;
 }
