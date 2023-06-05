@@ -13,6 +13,6 @@ function MainCounselor() {
     mainCFn();
   }, []);
 
-  return <>{mainCounselorData && <Template counselorData={mainCounselorData} />};</>;
+  return <>{mainCounselorData && <Template counselorData={mainCounselorData} />}</>;
 }
 export default MainCounselor;
