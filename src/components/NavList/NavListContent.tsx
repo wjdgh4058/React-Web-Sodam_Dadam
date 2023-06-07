@@ -3,6 +3,8 @@ import SodaIntroduction from '../CenterInfo/SodaIntroduction';
 import NavListCurrentLocation from './NavListCurrentLocation';
 import SodaWayToCome from '../CenterInfo/SodaWayToCome';
 import { useParams } from 'react-router-dom';
+import MainCounselor from '../CounselorInfo/MainCounselor';
+import SubCounselor from '../CounselorInfo/SubCounselor';
 
 function NavListContent({ itemData, listName }: { itemData: Array<string>; listName: string }) {
   const { id } = useParams<{ id: string }>();
@@ -15,6 +17,8 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '센터 안내' && id === '1' && <SodaIntroduction />}
       {listName === '센터 안내' && id === '2' && <ReservationInfo />}
       {listName === '센터 안내' && id === '3' && <SodaWayToCome />}
+      {listName === '상담전문가 소개' && id === '1' && <MainCounselor />}
+      {listName === '상담전문가 소개' && id === '2' && <SubCounselor />}
     </div>
   );
 }
