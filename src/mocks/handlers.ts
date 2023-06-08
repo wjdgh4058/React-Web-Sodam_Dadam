@@ -191,7 +191,7 @@ export const handlers = [
         {
           url: '/Counseling',
           listName: '심리상담',
-          listItem: ['개인상담', '심리검사', '집단상담', '청소년 & 부모상담', '부부 & 커플상담'],
+          listItem: ['개인상담', '집단상담', '심리검사', '청소년 & 부모상담', '부부 & 커플상담'],
           listImg: '../../../public/images/centerInfoImg.png',
           listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
         },
