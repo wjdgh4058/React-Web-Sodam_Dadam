@@ -35,7 +35,7 @@ function Template({ data }: { data: ICounselingType }) {
         })}
       </div>
       <div
-        className="w-[80%] h-80 mt-40 ml-auto mr-auto bg-cover bg-center mb-28 mxl:mt-28"
+        className="w-[80%] h-80 mt-40 ml-auto mr-auto bg-cover bg-center mb-28 mxl:mt-28 mxl:mb-8"
         style={{ backgroundImage: `url(${data.img_2})` }}></div>
       <ReservationBtn />
     </div>
