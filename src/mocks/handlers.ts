@@ -311,7 +311,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.json({
-        mainText: ['개인문제의 근원을 찾고', '지지와 공감 속에 함께 해결방향을 찾는 상담'],
+        mainText: ['집단의 역동을 활용하여', '개인관계, 대인관계를 돕는 집단상담'],
         img_1: '../../../public/images/centerImg2.jpeg',
         subText_1: ['공동의 주제에 대해 나누는 성장,', '교육집단으로 서로의 경험과 지혜를', '나누는 시간을 갖습니다.'],
         subText_2: [
@@ -329,7 +329,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.json({
-        mainText: ['개인문제의 근원을 찾고', '지지와 공감 속에 함께 해결방향을 찾는 상담'],
+        mainText: ['검사를 통해 다양한 심리적 특성에 대해 ', '파악하고 이를 통해 자신의 스토리를 찾는 심리검사'],
         img_1: '../../../public/images/centerImg2.jpeg',
         subText_1: ['개인 맞춤형 심리검사를', '선정하여 심층적인 자기 이해를 돕습니다.'],
         subText_2: [
@@ -348,7 +348,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.json({
-        mainText: ['개인문제의 근원을 찾고', '지지와 공감 속에 함께 해결방향을 찾는 상담'],
+        mainText: ['부모와 자녀가 함께', '성장통을 극복하도록 돕는 상담'],
         img_1: '../../../public/images/centerImg2.jpeg',
         subText_1: ['청소년의 적응문제', '해결 및 부모역량강화를 도와드립니다.'],
         subText_2: [
@@ -377,6 +377,61 @@ export const handlers = [
           '소담다담은 소중한 인연으로 만나 겪게 되는',
           '다양한 어려움을 슬기롭게 극복하고 서로에게 힘과 용기를',
           '주는 관계로 성장할 수 있도록 성찰할 시간을 제공합니다.',
+        ],
+        img_2: '../../../public/images/centerImg2.jpeg',
+      }),
+    );
+  }),
+
+  rest.get('http://localhost:3000/education/workShop', (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        mainText: ['상담 및 치료에 대한 이론이나', '기법소개, 실습 기회등을 제공하는 특강 및 워크숍'],
+        img_1: '../../../public/images/centerImg2.jpeg',
+        subText_1: [
+          '주제별 강연, 참여 활동 프로그램을 통해',
+          '자기 돌봄 및 삶에 대해 폭넓은 조망 능력을',
+          '증진시킬 수 있습니다.',
+        ],
+        subText_2: [
+          '소담다담은 상담 및 치료에 대한 이론이나 기법 소개,',
+          '실습 시회 등을 제공하는 워크샵을 통해 다양하고 질좋은',
+          '교육과 실습 기회를 제공합니다.',
+        ],
+        img_2: '../../../public/images/centerImg2.jpeg',
+      }),
+    );
+  }),
+
+  rest.get('http://localhost:3000/education/counselingEducation', (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        mainText: ['훈련과정에 있는 상담자들의', '성장에 도움이 되는 상담자 교육'],
+        img_1: '../../../public/images/centerImg2.jpeg',
+        subText_1: ['상담 전문가 양성을 위한 교육 프로그램으로', '슈퍼비전과 공개사례발표를 진행합니다.'],
+        subText_2: [
+          '소담다담은 훈련과정에 있는 상담자들의',
+          '개인적, 전문적 성장에 도움이 되는 교육 활동, 교육분석 등의',
+          '체계적인 교육을 제공합니다.',
+        ],
+        img_2: '../../../public/images/centerImg2.jpeg',
+      }),
+    );
+  }),
+
+  rest.get('http://localhost:3000/education/bookReading', (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        mainText: ['자신을 돌보는 북리딩 프로그램'],
+        img_1: '../../../public/images/centerImg2.jpeg',
+        subText_1: ['책을 통해 내면의 성장을 돕는', '소규모 세미나 형식으로 진행됩니다.'],
+        subText_2: [
+          '소담다담은 자신을 돌보는 북리딩 프로그램을 통해',
+          '책을 매개로 서로의 생각이나 느낌을 나누고 내면의 세계를',
+          '깊고, 넒게 확장시켜 나가고자 합니다.',
         ],
         img_2: '../../../public/images/centerImg2.jpeg',
       }),

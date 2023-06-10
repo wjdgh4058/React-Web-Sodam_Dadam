@@ -10,6 +10,9 @@ import Group from '../Counseling/Group';
 import PsychologicalTest from '../Counseling/PsychologicalTest';
 import Couple from '../Counseling/Couple';
 import AdolescentsParents from '../Counseling/AdolescentsParents';
+import BookReading from '../Education/BookReading';
+import WorkShop from '../Education/WorkShop';
+import CounselingEducation from '../Education/CounselingEducation';
 
 function NavListContent({ itemData, listName }: { itemData: Array<string>; listName: string }) {
   const { id } = useParams<{ id: string }>();
@@ -29,6 +32,9 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '심리상담' && id === '3' && <PsychologicalTest />}
       {listName === '심리상담' && id === '4' && <AdolescentsParents />}
       {listName === '심리상담' && id === '5' && <Couple />}
+      {listName === '심리교육' && id === '1' && <WorkShop />}
+      {listName === '심리교육' && id === '2' && <CounselingEducation />}
+      {listName === '심리교육' && id === '3' && <BookReading />}
     </div>
   );
 }
