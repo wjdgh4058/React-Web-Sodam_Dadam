@@ -60,7 +60,7 @@ function Header() {
                           <Link
                             to={`${item.url}/${index + 1}`}
                             key={index}
-                            className="flex justify-center p-1 ml-auto mr-auto text-xl font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b hover:text-2xl mxl:hover:text-base mxl:text-base">
+                            className="flex justify-center p-1 ml-auto mr-auto text-xl font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b mxl:text-base">
                             {listName}
                           </Link>
                         );
