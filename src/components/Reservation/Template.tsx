@@ -1,4 +1,7 @@
 function Template() {
+  const thStyle = 'p-4 border-b border-gray-700 border-x bg-gray-100 text-xl font-normal h-20 w-64';
+  const tdStyle = 'p-4 border-b border-gray-700 border-x text-xl h-20 pl-12';
+  const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48';
   return (
     <div className="ml-[15%] mr-[15%] flex flex-col">
       <p className="pb-6 mt-12 text-4xl font-medium text-blue-800 border-b-2">상담예약하기</p>
@@ -15,7 +18,7 @@ function Template() {
         파기합니다.&#10;단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.&#10;&#10;- 보존 항목 :
         성명, 성별, 연령, 핸드폰, E-mail&#10;&#10;- 보존 기간 : 글 삭제시 까지
       </pre>
-      <div className="flex items-center justify-end gap-1 mt-8 mr-2 text-2xl">
+      <div className="flex items-center justify-end gap-1 mt-12 text-2xl">
         <input
           type="radio"
           value="동의"
