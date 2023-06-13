@@ -42,6 +42,126 @@ function Template() {
           동의안함
         </label>
       </div>
+      <table className="mt-12">
+        <tbody>
+          <tr className="border-t-4 border-slate-900 ">
+            <th className={thStyle}>상담/교육</th>
+            <td className={tdStyle} colSpan={3}>
+              <select name="program" id="program" className={inputStyle}>
+                <option value="선택">선택</option>
+                <option value="개인상담">개인상담</option>
+                <option value="집단상담">집단상담</option>
+                <option value="심리검사">심리검사</option>
+                <option value="청소년&부모상담">청소년&부모상담</option>
+                <option value="부부&커플상담">부부&커플상담</option>
+                <option value="특강/워크숍">특강/워크숍</option>
+                <option value="상담자교육">상담자교육</option>
+                <option value="북리딩세미나">북리딩세미나</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th className={thStyle}>이름</th>
+            <td className={tdStyle} colSpan={3}>
+              <input type="text" name="name" className={inputStyle} />
+            </td>
+          </tr>
+          <tr>
+            <th className={thStyle}>성별</th>
+            <td className={tdStyle}>
+              <input type="radio" value="남자" title="남자" id="man" name="gender" className="w-4 h-4 peer/man" />
+              <label htmlFor="man" className="ml-2 peer-checked/man:text-blue-900">
+                남자
+              </label>
+              <input
+                type="radio"
+                value="여자"
+                title="여자"
+                id="woman"
+                name="gender"
+                className="w-4 h-4 ml-2 ml-8 peer/woman"
+              />
+              <label htmlFor="woman" className="ml-2 peer-checked/woman:text-blue-900">
+                여자
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th className={thStyle}>연령</th>
+            <td className={tdStyle}>
+              <select name="age" id="age" className={inputStyle}>
+                <option value="10대">10대</option>
+                <option value="20대">20대</option>
+                <option value="30대">30대</option>
+                <option value="40대">40대</option>
+                <option value="50대">50대</option>
+                <option value="60대">60대</option>
+                <option value="70대">70대</option>
+                <option value="80대">80대</option>
+                <option value="기타">기타</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th className={thStyle}>연락처</th>
+            <td className={tdStyle} colSpan={3}>
+              <select name="phoneNumber" id="phoneNumber" required className={`${inputStyle} mr-4`}>
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+              </select>
+              -
+              <input type="text" name="hp-first" className={`${inputStyle} mx-4`} />
+              -
+              <input type="text" name="hp-last" className={`${inputStyle} ml-4 mr-8`} />
+              {`(정확히 입력하여야 상담신청이 가능합니다.)`}
+            </td>
+          </tr>
+          <tr>
+            <th className={thStyle}>이메일</th>
+            <td className={tdStyle}>
+              <input type="text" name="email-first" className={`${inputStyle} mr-4`} />
+              @
+              <input type="text" name="email-last" className={`${inputStyle} mx-4`} />
+              <select name="email-select" id="email-select" required className={`${inputStyle}`}>
+                <option value="직접입력">직접입력</option>
+                <option value="naver.com">naver.com</option>
+                <option value="daum.net">daum.net</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="nate.com">nate.com</option>
+                <option value="hanmail.com">hanmail.com</option>
+                <option value="yahoo.co.kr">yahoo.co.kr</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th className={thStyle}>상담/교육 일정 선택</th>
+            <td className={tdStyle}>
+              <input type="text" name="date" className={`${inputStyle} mr-4`} />
+              <select name="email-select" id="hour" required className={`${inputStyle} mx-4`}>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+              </select>
+              시
+              <select name="email-select" id="minute" required className={`${inputStyle} mx-4`}>
+                <option value="00">00</option>
+                <option value="30">30</option>
+              </select>
+              분
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
