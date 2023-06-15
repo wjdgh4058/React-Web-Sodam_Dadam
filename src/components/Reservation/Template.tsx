@@ -1,7 +1,13 @@
+import DatePickerComponent from './DatePickerComponent';
+
 function Template() {
   const thStyle = 'p-4 border-b border-gray-700 border-x bg-gray-100 text-xl font-normal h-20 w-64';
-  const tdStyle = 'p-4 border-b border-gray-700 border-x text-xl h-20 pl-12';
+  const tdStyle = 'p-4 border-b border-gray-700 border-r text-xl h-20 pl-12';
   const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48';
+
+  const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
   return (
     <div className="ml-[15%] mr-[15%] flex flex-col">
       <p className="pb-6 mt-12 text-4xl font-medium text-blue-800 border-b-2">상담예약하기</p>
@@ -63,7 +69,7 @@ function Template() {
           <tr>
             <th className={thStyle}>이름</th>
             <td className={tdStyle} colSpan={3}>
-              <input type="text" name="name" className={inputStyle} />
+              <input type="text" name="name" className={inputStyle} onChange={changeInput} />
             </td>
           </tr>
           <tr>
@@ -114,7 +120,7 @@ function Template() {
                 <option value="019">019</option>
               </select>
               -
-              <input type="text" name="hp-first" className={`${inputStyle} mx-4`} />
+              <input type="text" name="hp-first" className={`${inputStyle} mx-4`} onChange={changeInput} />
               -
               <input type="text" name="hp-last" className={`${inputStyle} ml-4 mr-8`} />
               {`(정확히 입력하여야 상담신청이 가능합니다.)`}
@@ -139,8 +145,8 @@ function Template() {
           </tr>
           <tr>
             <th className={thStyle}>상담/교육 일정 선택</th>
-            <td className={tdStyle}>
-              <input type="text" name="date" className={`${inputStyle} mr-4`} />
+            <td className={`${tdStyle} flex items-center`}>
+              <DatePickerComponent />
               <select name="email-select" id="hour" required className={`${inputStyle} mx-4`}>
                 <option value="9">9</option>
                 <option value="10">10</option>
