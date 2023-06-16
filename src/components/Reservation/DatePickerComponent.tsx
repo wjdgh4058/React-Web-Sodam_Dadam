@@ -16,9 +16,8 @@ function DatePickerComponent() {
       <DatePicker
         selected={selectedDate}
         onChange={handleDateChange}
-        locale={ko} // 한글 locale 설정
-        dateFormat="yyyy/MM/dd" // 날짜 형식 설정
-        // isClearable
+        locale={ko}
+        dateFormat="yyyy/MM/dd"
         placeholderText="날짜를 선택하세요"
         className="w-48 h-12 pl-4 border border-gray-700 rounded"
       />

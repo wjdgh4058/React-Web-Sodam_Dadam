@@ -6,8 +6,25 @@ function Template() {
   const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48';
 
   const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
+    const { id, value } = e.target;
+    console.log(id, value);
   };
+  const changSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    console.log(id, value);
+    if (id === 'email-second') {
+      const emailSecondInput = document.getElementById('email-second-input') as HTMLInputElement;
+
+      if (value !== '직접입력') {
+        emailSecondInput.value = value;
+        emailSecondInput.disabled = true;
+      } else {
+        emailSecondInput.value = '';
+        emailSecondInput.disabled = false;
+      }
+    }
+  };
+
   return (
     <div className="ml-[15%] mr-[15%] flex flex-col">
       <p className="pb-6 mt-12 text-4xl font-medium text-blue-800 border-b-2">상담예약하기</p>
@@ -32,6 +49,7 @@ function Template() {
           id="agree"
           name="agree"
           className="w-4 h-4 peer/agree"
+          onChange={changeInput}
         />
         <label htmlFor="agree" className="peer-checked/agree:text-blue-900">
           동의함
@@ -40,9 +58,10 @@ function Template() {
           type="radio"
           value="비동의"
           title="개인정보 이용,수집 등에 동의하지 않습니다."
-          id="notagree"
-          name="agree"
+          id="agree"
+          name="notagree"
           className="w-4 h-4 ml-2 peer/notagree"
+          onChange={changeInput}
         />
         <label htmlFor="notagree" className="peer-checked/notagree:text-blue-900">
           동의안함
@@ -53,7 +72,7 @@ function Template() {
           <tr className="border-t-4 border-slate-900 ">
             <th className={thStyle}>상담/교육</th>
             <td className={tdStyle} colSpan={3}>
-              <select name="program" id="program" className={inputStyle}>
+              <select name="program" id="program" className={inputStyle} onChange={changSelect}>
                 <option value="선택">선택</option>
                 <option value="개인상담">개인상담</option>
                 <option value="집단상담">집단상담</option>
@@ -69,13 +88,21 @@ function Template() {
           <tr>
             <th className={thStyle}>이름</th>
             <td className={tdStyle} colSpan={3}>
-              <input type="text" name="name" className={inputStyle} onChange={changeInput} />
+              <input type="text" name="name" className={inputStyle} id="name" onChange={changeInput} />
             </td>
           </tr>
           <tr>
             <th className={thStyle}>성별</th>
             <td className={tdStyle}>
-              <input type="radio" value="남자" title="남자" id="man" name="gender" className="w-4 h-4 peer/man" />
+              <input
+                type="radio"
+                value="남자"
+                title="남자"
+                id="gender"
+                name="man"
+                className="w-4 h-4 peer/man"
+                onChange={changeInput}
+              />
               <label htmlFor="man" className="ml-2 peer-checked/man:text-blue-900">
                 남자
               </label>
@@ -83,9 +110,10 @@ function Template() {
                 type="radio"
                 value="여자"
                 title="여자"
-                id="woman"
-                name="gender"
+                id="gender"
+                name="woman"
                 className="w-4 h-4 ml-2 ml-8 peer/woman"
+                onChange={changeInput}
               />
               <label htmlFor="woman" className="ml-2 peer-checked/woman:text-blue-900">
                 여자
@@ -95,7 +123,7 @@ function Template() {
           <tr>
             <th className={thStyle}>연령</th>
             <td className={tdStyle}>
-              <select name="age" id="age" className={inputStyle}>
+              <select name="age" id="age" className={inputStyle} onChange={changSelect}>
                 <option value="10대">10대</option>
                 <option value="20대">20대</option>
                 <option value="30대">30대</option>
@@ -111,7 +139,12 @@ function Template() {
           <tr>
             <th className={thStyle}>연락처</th>
             <td className={tdStyle} colSpan={3}>
-              <select name="phoneNumber" id="phoneNumber" required className={`${inputStyle} mr-4`}>
+              <select
+                name="phoneNumber"
+                id="phoneNumber-first"
+                required
+                className={`${inputStyle} mr-4`}
+                onChange={changSelect}>
                 <option value="010">010</option>
                 <option value="011">011</option>
                 <option value="016">016</option>
@@ -120,19 +153,37 @@ function Template() {
                 <option value="019">019</option>
               </select>
               -
-              <input type="text" name="hp-first" className={`${inputStyle} mx-4`} onChange={changeInput} />
+              <input
+                type="text"
+                name="phoneNumber"
+                className={`${inputStyle} mx-4`}
+                onChange={changeInput}
+                id="phoneNumber-second"
+              />
               -
-              <input type="text" name="hp-last" className={`${inputStyle} ml-4 mr-8`} />
+              <input type="text" name="phoneNumber" className={`${inputStyle} ml-4 mr-8`} id="phoneNumber-last" />
               {`(정확히 입력하여야 상담신청이 가능합니다.)`}
             </td>
           </tr>
           <tr>
             <th className={thStyle}>이메일</th>
             <td className={tdStyle}>
-              <input type="text" name="email-first" className={`${inputStyle} mr-4`} />
+              <input
+                type="text"
+                name="email-first"
+                className={`${inputStyle} mr-4`}
+                id="email-first"
+                onChange={changeInput}
+              />
               @
-              <input type="text" name="email-last" className={`${inputStyle} mx-4`} />
-              <select name="email-select" id="email-select" required className={`${inputStyle}`}>
+              <input
+                type="text"
+                name="email-second"
+                className={`${inputStyle} mx-4`}
+                id="email-second-input"
+                onChange={changeInput}
+              />
+              <select name="email-second" required className={`${inputStyle}`} id="email-second" onChange={changSelect}>
                 <option value="직접입력">직접입력</option>
                 <option value="naver.com">naver.com</option>
                 <option value="daum.net">daum.net</option>
@@ -147,7 +198,7 @@ function Template() {
             <th className={thStyle}>상담/교육 일정 선택</th>
             <td className={`${tdStyle} flex items-center`}>
               <DatePickerComponent />
-              <select name="email-select" id="hour" required className={`${inputStyle} mx-4`}>
+              <select name="email-select" id="hour" required className={`${inputStyle} mx-4`} onChange={changSelect}>
                 <option value="9">9</option>
                 <option value="10">10</option>
                 <option value="11">11</option>
@@ -159,7 +210,7 @@ function Template() {
                 <option value="17">17</option>
               </select>
               시
-              <select name="email-select" id="minute" required className={`${inputStyle} mx-4`}>
+              <select name="email-select" id="minute" required className={`${inputStyle} mx-4`} onChange={changSelect}>
                 <option value="00">00</option>
                 <option value="30">30</option>
               </select>
