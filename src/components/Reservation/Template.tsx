@@ -1,19 +1,40 @@
+import { useState } from 'react';
 import DatePickerComponent from './DatePickerComponent';
+import { IInputStateType } from './ReservationType';
 
 function Template() {
   const thStyle = 'p-4 border-b border-gray-700 border-x bg-gray-100 text-xl font-normal h-20 w-64';
   const tdStyle = 'p-4 border-b border-gray-700 border-r text-xl h-20 pl-12';
   const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48';
 
+  const inputData = {
+    agree: '',
+    program: '',
+    name: '',
+    genger: '',
+    age: '',
+    phoneNumber_first: '',
+    phoneNumber_second: '',
+    phoneNumber_last: '',
+    email_first: '',
+    email_second: '',
+    date: '',
+    hour: '',
+    minute: '',
+  };
+  const [inputState, setInputState] = useState<IInputStateType>(inputData);
+
   const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    console.log(name, value);
+    setInputState({
+      ...inputState,
+      [name]: value,
+    });
   };
   const changSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    console.log(name, value);
-    if (name === 'email-second') {
-      const emailSecondInput = document.getElementById('email-second-input') as HTMLInputElement;
+    const { name, value, id } = e.target;
+    if (id === 'email_second') {
+      const emailSecondInput = document.getElementById('email_second_input') as HTMLInputElement;
 
       if (value !== '직접입력') {
         emailSecondInput.value = value;
@@ -23,7 +44,13 @@ function Template() {
         emailSecondInput.disabled = false;
       }
     }
+    setInputState({
+      ...inputState,
+      [name]: value,
+    });
   };
+
+  console.log(inputState);
 
   return (
     <div className="ml-[15%] mr-[15%] flex flex-col">
@@ -124,6 +151,7 @@ function Template() {
             <th className={thStyle}>연령</th>
             <td className={tdStyle}>
               <select name="age" id="age" className={inputStyle} onChange={changSelect}>
+                <option value="선택">선택</option>
                 <option value="10대">10대</option>
                 <option value="20대">20대</option>
                 <option value="30대">30대</option>
@@ -140,11 +168,12 @@ function Template() {
             <th className={thStyle}>연락처</th>
             <td className={tdStyle} colSpan={3}>
               <select
-                name="phoneNumber-first"
-                id="phoneNumber-first"
+                name="phoneNumber_first"
+                id="phoneNumber_first"
                 required
                 className={`${inputStyle} mr-4`}
                 onChange={changSelect}>
+                <option value="선택">선택</option>
                 <option value="010">010</option>
                 <option value="011">011</option>
                 <option value="016">016</option>
@@ -155,13 +184,13 @@ function Template() {
               -
               <input
                 type="text"
-                name="phoneNumber-second"
+                name="phoneNumber_second"
                 className={`${inputStyle} mx-4`}
                 onChange={changeInput}
-                id="phoneNumber-second"
+                id="phoneNumber_second"
               />
               -
-              <input type="text" name="phoneNumber-last" className={`${inputStyle} ml-4 mr-8`} id="phoneNumber-last" />
+              <input type="text" name="phoneNumber_last" className={`${inputStyle} ml-4 mr-8`} id="phoneNumber_last" />
               {`(정확히 입력하여야 상담신청이 가능합니다.)`}
             </td>
           </tr>
@@ -170,20 +199,20 @@ function Template() {
             <td className={tdStyle}>
               <input
                 type="text"
-                name="email-first"
+                name="email_first"
                 className={`${inputStyle} mr-4`}
-                id="email-first"
+                id="email_first"
                 onChange={changeInput}
               />
               @
               <input
                 type="text"
-                name="email-second-input"
+                name="email_second"
                 className={`${inputStyle} mx-4`}
-                id="email-second-input"
+                id="email_second_input"
                 onChange={changeInput}
               />
-              <select name="email-second" required className={`${inputStyle}`} id="email-second" onChange={changSelect}>
+              <select name="email_second" required className={`${inputStyle}`} id="email_second" onChange={changSelect}>
                 <option value="직접입력">직접입력</option>
                 <option value="naver.com">naver.com</option>
                 <option value="daum.net">daum.net</option>
@@ -199,6 +228,7 @@ function Template() {
             <td className={`${tdStyle} flex items-center`}>
               <DatePickerComponent />
               <select name="hour" id="hour" required className={`${inputStyle} mx-4`} onChange={changSelect}>
+                <option value="선택">선택</option>
                 <option value="9">9</option>
                 <option value="10">10</option>
                 <option value="11">11</option>
@@ -211,6 +241,7 @@ function Template() {
               </select>
               시
               <select name="minute" id="minute" required className={`${inputStyle} mx-4`} onChange={changSelect}>
+                <option value="선택">선택</option>
                 <option value="00">00</option>
                 <option value="30">30</option>
               </select>
