@@ -18,19 +18,32 @@ function Template() {
     phoneNumber_last: '',
     email_first: '',
     email_second: '',
-    date: '',
+    ymd: '',
     hour: '',
     minute: '',
     content: '',
+    phoneNumber: '',
+    email: '',
+    reservationDate: '',
   };
   const [inputState, setInputState] = useState<IInputStateType>(inputData);
 
   const changeInput = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setInputState({
+    const newInputState = {
       ...inputState,
       [name]: value,
-    });
+    };
+
+    newInputState.phoneNumber = [
+      newInputState.phoneNumber_first,
+      newInputState.phoneNumber_second,
+      newInputState.phoneNumber_last,
+    ].join('');
+
+    newInputState.email = [newInputState.email_first, '@', newInputState.email_second].join('');
+
+    setInputState(newInputState);
   };
   const changSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value, id } = e.target;
@@ -45,10 +58,29 @@ function Template() {
         emailSecondInput.disabled = false;
       }
     }
-    setInputState({
+    const newInputState = {
       ...inputState,
       [name]: value,
-    });
+    };
+
+    newInputState.phoneNumber = [
+      newInputState.phoneNumber_first,
+      newInputState.phoneNumber_second,
+      newInputState.phoneNumber_last,
+    ].join('');
+
+    newInputState.reservationDate = [
+      newInputState.ymd,
+      ' ',
+      newInputState.hour,
+      ' 시 ',
+      newInputState.minute,
+      ' 분',
+    ].join('');
+
+    newInputState.email = [newInputState.email_first, '@', newInputState.email_second].join('');
+
+    setInputState(newInputState);
   };
 
   console.log(inputState);
@@ -201,8 +233,9 @@ function Template() {
                   name="phoneNumber_last"
                   className={`${inputStyle} ml-4 mr-8`}
                   id="phoneNumber_last"
+                  onChange={changeInput}
                 />
-                {`(정확히 입력하여야 상담신청이 가능합니다.)`}
+                <div className="mt-4">(정확히 입력하여야 상담신청이 가능합니다.)</div>
               </td>
             </tr>
             <tr>
@@ -242,7 +275,7 @@ function Template() {
             <tr>
               <th className={thStyle}>상담/교육 일정 선택</th>
               <td className={`${tdStyle} flex items-center`}>
-                <DatePickerComponent />
+                <DatePickerComponent inputState={inputState} setInputState={setInputState} />
                 <select name="hour" id="hour" required className={`${inputStyle} mx-4`} onChange={changSelect}>
                   <option value="선택">선택</option>
                   <option value="9">9</option>
@@ -264,7 +297,7 @@ function Template() {
                 분
               </td>
             </tr>
-            <tr>
+            <tr className="border-b-4 border-slate-900">
               <th className={thStyle}>내용</th>
               <td className={`${tdStyle} pr-12`} colSpan={3}>
                 <textarea

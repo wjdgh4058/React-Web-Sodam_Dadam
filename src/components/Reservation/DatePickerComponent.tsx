@@ -2,14 +2,35 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import ko from 'date-fns/locale/ko';
+import { IInputStateType } from './ReservationType';
+import { format } from 'date-fns';
 
-function DatePickerComponent() {
+function DatePickerComponent({
+  inputState,
+  setInputState,
+}: {
+  inputState: IInputStateType;
+  setInputState: React.Dispatch<React.SetStateAction<IInputStateType>>;
+}) {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   const handleDateChange = (date: Date | null) => {
+    const formattedDate = date ? format(date, 'yyyy/MM/dd') : '';
     setSelectedDate(date);
+    const newInputState = {
+      ...inputState,
+      ymd: formattedDate,
+    };
+    newInputState.reservationDate = [
+      newInputState.ymd,
+      ' ',
+      newInputState.hour,
+      ' 시 ',
+      newInputState.minute,
+      ' 분',
+    ].join('');
+    setInputState(newInputState);
   };
-  console.log(selectedDate);
 
   return (
     <div>

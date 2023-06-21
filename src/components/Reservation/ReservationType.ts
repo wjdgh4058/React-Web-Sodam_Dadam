@@ -9,7 +9,11 @@ export interface IInputStateType {
   phoneNumber_last: string;
   email_first: string;
   email_second: string;
-  date: string;
+  ymd: string;
   hour: string;
   minute: string;
+  content: string;
+  phoneNumber: string;
+  email: string;
+  reservationDate: string;
 }
