@@ -40,7 +40,7 @@ function DatePickerComponent({
         locale={ko}
         dateFormat="yyyy/MM/dd"
         placeholderText="날짜를 선택하세요"
-        className="w-48 h-12 pl-4 border border-gray-700 rounded"
+        className="w-48 h-12 pl-4 border border-gray-700 rounded mxl:w-36 mxl:text-base mxl:pl-2"
       />
     </div>
   );

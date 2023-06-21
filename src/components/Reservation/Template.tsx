@@ -3,9 +3,9 @@ import DatePickerComponent from './DatePickerComponent';
 import { IInputStateType } from './ReservationType';
 
 function Template() {
-  const thStyle = 'p-4 border-b border-gray-700 border-x bg-gray-100 text-xl font-normal h-20 w-64';
-  const tdStyle = 'p-4 border-b border-gray-700 border-r text-xl h-20 pl-12';
-  const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48';
+  const thStyle = 'p-4 border-b border-gray-700 border-x bg-gray-100 text-xl font-normal h-20 w-64 mxl:text-base';
+  const tdStyle = 'p-4 border-b border-gray-700 border-r text-xl h-20 pl-12 mxl:pl-8 mxl:text-base';
+  const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48 mxl:w-24';
 
   const inputData = {
     agree: '',
@@ -88,16 +88,15 @@ function Template() {
   return (
     <>
       <div
-        className="w-full ml-auto mr-auto bg-center bg-cover h-96"
+        className="w-full ml-auto mr-auto bg-center bg-cover h-96 mxl:h-56"
         style={{ backgroundImage: `url(../../../public/images/sodaInfoImg.jpg)` }}></div>
-      <div className="flex flex-col gap-2 mt-8 mxl:mt-28"></div>
-      <div className="ml-[15%] mr-[15%] flex flex-col">
+      <div className="ml-[15%] mr-[15%] flex flex-col mxl:ml-[7%] mxl:mr-[7%]">
         <p className="pb-6 mt-12 text-4xl font-medium text-blue-800 border-b-2">상담예약하기</p>
         <div className="mt-12 text-2xl">
           <span className="font-semibold ">개인정보 수집·이용</span>
           <span className="text-gray-600 "> 등에 대한 동의</span>
         </div>
-        <pre className="p-10 mt-12 overflow-y-scroll text-xl border-4 h-72 ">
+        <pre className="p-10 mt-12 overflow-y-scroll text-xl border-4 h-72 mxl:text:lg">
           ▪︎ 수집하는 개인정보 항목 &#10; &#10;회사는 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고
           있습니다.&#10;&#10;- 수집항목 : 성명, 성별, 연령, 핸드폰, E-mail&#10;- 개인정보 수집방법 : 홈페이지(신청하기)
           &#10;&#10;▪︎ 개인정보의 수집 및 이용목적 회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.&#10;&#10;-
@@ -116,7 +115,7 @@ function Template() {
             className="w-4 h-4 peer/agree"
             onChange={changeInput}
           />
-          <label htmlFor="agree" className="peer-checked/agree:text-blue-900">
+          <label htmlFor="agree" className="peer-checked/agree:text-blue-900 mxl:text-xl">
             동의함
           </label>
           <input
@@ -128,7 +127,7 @@ function Template() {
             className="w-4 h-4 ml-2 peer/notagree"
             onChange={changeInput}
           />
-          <label htmlFor="notagree" className="peer-checked/notagree:text-blue-900">
+          <label htmlFor="notagree" className="peer-checked/notagree:text-blue-900 mxl:text-xl">
             동의안함
           </label>
         </div>
@@ -205,36 +204,38 @@ function Template() {
             <tr>
               <th className={thStyle}>연락처</th>
               <td className={tdStyle} colSpan={3}>
-                <select
-                  name="phoneNumber_first"
-                  id="phoneNumber_first"
-                  required
-                  className={`${inputStyle} mr-4`}
-                  onChange={changSelect}>
-                  <option value="선택">선택</option>
-                  <option value="010">010</option>
-                  <option value="011">011</option>
-                  <option value="016">016</option>
-                  <option value="017">017</option>
-                  <option value="018">018</option>
-                  <option value="019">019</option>
-                </select>
-                -
-                <input
-                  type="text"
-                  name="phoneNumber_second"
-                  className={`${inputStyle} mx-4`}
-                  onChange={changeInput}
-                  id="phoneNumber_second"
-                />
-                -
-                <input
-                  type="text"
-                  name="phoneNumber_last"
-                  className={`${inputStyle} ml-4 mr-8`}
-                  id="phoneNumber_last"
-                  onChange={changeInput}
-                />
+                <div className="flex items-center">
+                  <select
+                    name="phoneNumber_first"
+                    id="phoneNumber_first"
+                    required
+                    className={`${inputStyle} mr-4 mxl:mr-2`}
+                    onChange={changSelect}>
+                    <option value="선택">선택</option>
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="018">018</option>
+                    <option value="019">019</option>
+                  </select>
+                  <div className="mmd:hidden">-</div>
+                  <input
+                    type="text"
+                    name="phoneNumber_second"
+                    className={`${inputStyle} mx-4 mxl:mx-2`}
+                    onChange={changeInput}
+                    id="phoneNumber_second"
+                  />
+                  <div className="mmd:hidden">-</div>
+                  <input
+                    type="text"
+                    name="phoneNumber_last"
+                    className={`${inputStyle} ml-4 mr-8 mxl:ml-2 mxl:mr-4`}
+                    id="phoneNumber_last"
+                    onChange={changeInput}
+                  />
+                </div>
                 <div className="mt-4">(정확히 입력하여야 상담신청이 가능합니다.)</div>
               </td>
             </tr>
@@ -244,7 +245,7 @@ function Template() {
                 <input
                   type="text"
                   name="email_first"
-                  className={`${inputStyle} mr-4`}
+                  className={`${inputStyle} mr-4 mxl:mr-2`}
                   id="email_first"
                   onChange={changeInput}
                 />
@@ -252,7 +253,7 @@ function Template() {
                 <input
                   type="text"
                   name="email_second"
-                  className={`${inputStyle} mx-4`}
+                  className={`${inputStyle} mx-4 mxl:mx-2`}
                   id="email_second_input"
                   onChange={changeInput}
                 />
@@ -273,10 +274,10 @@ function Template() {
               </td>
             </tr>
             <tr>
-              <th className={thStyle}>상담/교육 일정 선택</th>
+              <th className={thStyle}>일정</th>
               <td className={`${tdStyle} flex items-center`}>
                 <DatePickerComponent inputState={inputState} setInputState={setInputState} />
-                <select name="hour" id="hour" required className={`${inputStyle} mx-4`} onChange={changSelect}>
+                <select name="hour" id="hour" required className={`${inputStyle} mx-4 mxl:mx-2`} onChange={changSelect}>
                   <option value="선택">선택</option>
                   <option value="9">9</option>
                   <option value="10">10</option>
@@ -289,7 +290,12 @@ function Template() {
                   <option value="17">17</option>
                 </select>
                 시
-                <select name="minute" id="minute" required className={`${inputStyle} mx-4`} onChange={changSelect}>
+                <select
+                  name="minute"
+                  id="minute"
+                  required
+                  className={`${inputStyle} mx-4 mxl:mx-2`}
+                  onChange={changSelect}>
                   <option value="선택">선택</option>
                   <option value="00">00</option>
                   <option value="30">30</option>
@@ -303,14 +309,14 @@ function Template() {
                 <textarea
                   name="content"
                   id="content"
-                  className={`${inputStyle} w-full h-80 p-4`}
+                  className={`${inputStyle} w-full h-80 p-4 mxl:w-full mxl:h-40`}
                   onChange={changeInput}></textarea>
               </td>
             </tr>
           </tbody>
         </table>
-        <div className="flex justify-end mt-12 mb-12">
-          <button className="px-8 py-3 text-xl bg-gray-200">확인</button>
+        <div className="flex justify-end mt-12 mb-12 mxl:mt-8 mxl:mb-8">
+          <button className="px-8 py-3 text-xl bg-gray-200 mxl:px-6 mxl:py-2">확인</button>
         </div>
       </div>
     </>
