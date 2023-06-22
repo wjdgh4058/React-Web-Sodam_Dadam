@@ -27,6 +27,9 @@ function Template() {
     reservationDate: '',
   };
   const [inputState, setInputState] = useState<IInputStateType>(inputData);
+  const [isName, setIsName] = useState<boolean>(true);
+  const [isEmail, setIsEmail] = useState<boolean>(true);
+  const [isPhone, setIsPhone] = useState<boolean>(true);
 
   const changeInput = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -42,6 +45,17 @@ function Template() {
     ].join('');
 
     newInputState.email = [newInputState.email_first, '@', newInputState.email_second].join('');
+
+    if (e.target.id === 'name') {
+      e.target.value.length < 2 || e.target.value.length > 5 ? setIsName(true) : setIsName(false);
+    }
+
+    const emailRegex =
+      /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    emailRegex.test(newInputState.email) ? setIsEmail(false) : setIsEmail(true);
+
+    const phoneNumberRegex = /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/;
+    phoneNumberRegex.test(newInputState.phoneNumber) ? setIsPhone(false) : setIsPhone(true);
 
     setInputState(newInputState);
   };
@@ -80,10 +94,17 @@ function Template() {
 
     newInputState.email = [newInputState.email_first, '@', newInputState.email_second].join('');
 
+    const emailRegex =
+      /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    emailRegex.test(newInputState.email) ? setIsEmail(false) : setIsEmail(true);
+
+    const phoneNumberRegex = /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/;
+    phoneNumberRegex.test(newInputState.phoneNumber) ? setIsPhone(false) : setIsPhone(true);
+
     setInputState(newInputState);
   };
 
-  console.log(inputState);
+  // console.log(inputState);
 
   return (
     <>
@@ -153,6 +174,11 @@ function Template() {
               <th className={thStyle}>이름</th>
               <td className={tdStyle} colSpan={3}>
                 <input type="text" name="name" className={inputStyle} id="name" onChange={changeInput} />
+                {isName ? (
+                  <div className="mt-4 text-red-600">2글자 이상 5글자 이하로 입력해주세요.</div>
+                ) : (
+                  <div className="mt-4 text-blue-600">{`올바른 이름 형식입니다 :)`}</div>
+                )}
               </td>
             </tr>
             <tr>
@@ -236,7 +262,11 @@ function Template() {
                     onChange={changeInput}
                   />
                 </div>
-                <div className="mt-4">(정확히 입력하여야 상담신청이 가능합니다.)</div>
+                {isPhone ? (
+                  <div className="mt-4 text-red-600">정확히 입력하여야 상담신청이 가능합니다.</div>
+                ) : (
+                  <div className="mt-4 text-blue-600">{`올바른 전화번호 형식입니다 :)`}</div>
+                )}
               </td>
             </tr>
             <tr>
@@ -271,6 +301,11 @@ function Template() {
                   <option value="hanmail.com">hanmail.com</option>
                   <option value="yahoo.co.kr">yahoo.co.kr</option>
                 </select>
+                {isEmail ? (
+                  <div className="mt-4 text-red-600">이메일 형식을 확인해주세요.</div>
+                ) : (
+                  <div className="mt-4 text-blue-600">{`올바른 이메일 형식입니다 :)`}</div>
+                )}
               </td>
             </tr>
             <tr>
