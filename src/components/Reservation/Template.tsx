@@ -175,9 +175,9 @@ function Template() {
               <td className={tdStyle} colSpan={3}>
                 <input type="text" name="name" className={inputStyle} id="name" onChange={changeInput} />
                 {isName ? (
-                  <div className="mt-4 text-red-600">2글자 이상 5글자 이하로 입력해주세요.</div>
+                  <div className="mt-4 ml-1 text-red-600">2글자 이상 5글자 이하로 입력해주세요.</div>
                 ) : (
-                  <div className="mt-4 text-blue-600">{`올바른 이름 형식입니다 :)`}</div>
+                  <div className="mt-4 ml-1 text-blue-700">{`올바른 이름 형식입니다 :)`}</div>
                 )}
               </td>
             </tr>
@@ -263,9 +263,9 @@ function Template() {
                   />
                 </div>
                 {isPhone ? (
-                  <div className="mt-4 text-red-600">정확히 입력하여야 상담신청이 가능합니다.</div>
+                  <div className="mt-4 ml-1 text-red-600">정확히 입력하여야 상담신청이 가능합니다.</div>
                 ) : (
-                  <div className="mt-4 text-blue-600">{`올바른 전화번호 형식입니다 :)`}</div>
+                  <div className="mt-4 ml-1 text-blue-700">{`올바른 전화번호 형식입니다 :)`}</div>
                 )}
               </td>
             </tr>
@@ -302,9 +302,9 @@ function Template() {
                   <option value="yahoo.co.kr">yahoo.co.kr</option>
                 </select>
                 {isEmail ? (
-                  <div className="mt-4 text-red-600">이메일 형식을 확인해주세요.</div>
+                  <div className="mt-4 ml-1 text-red-600">이메일 형식을 확인해주세요.</div>
                 ) : (
-                  <div className="mt-4 text-blue-600">{`올바른 이메일 형식입니다 :)`}</div>
+                  <div className="mt-4 ml-1 text-blue-700">{`올바른 이메일 형식입니다 :)`}</div>
                 )}
               </td>
             </tr>
