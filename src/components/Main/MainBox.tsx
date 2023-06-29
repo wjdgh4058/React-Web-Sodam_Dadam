@@ -3,12 +3,13 @@ import MainCard from './MainCard';
 
 function MainBox({ data, name }: IMainBoxType) {
   return (
-    <div
-      className={`w-full max-w-5xl text-white ${name === '심리 상담' ? 'bg-[#4575CA]' : 'bg-[#45ACCA]'} mb-10 h-full `}>
-      <div className="w-full mt-4 text-lg font-bold text-center">{name}</div>
-      <div className="flex w-full flex-nowrap">
+    <div className={`w-[80%] mb-10 h-full mt-10 mlg:mt-4`}>
+      <div className="text-3xl font-semibold text-center mlg:text-xl">
+        <span className="pb-4 border-b-2 border-gray-400">{name}</span>
+      </div>
+      <div className={`flex w-full mt-20 flex-nowrap mlg:mt-12 ${name === '심리 상담' ? 'gap-2' : 'gap-8'}`}>
         {data.map((item: IMainCardType) => (
-          <MainCard title={item.title} content={item.content} img={item.img} />
+          <MainCard title={item.title} content={item.content} img={item.img} name={name} />
         ))}
       </div>
     </div>
