@@ -21,6 +21,11 @@ export const handlers = [
             content: '스트레스 완화, 적응력 향상을 위한 1:1 성인상담',
           },
           {
+            img: '/images/groupCounselingImg.png',
+            title: '집단 상담',
+            content: '공동의 주제에 대해 나누는 성장, 교육집단',
+          },
+          {
             img: '/images/psychologicalTestImg.png',
             title: '심리 검사',
             content: '개인 맞춤형 심리검사를 선정하여 심층적 자기 이해',
@@ -34,11 +39,6 @@ export const handlers = [
             img: '/images/coupleCounselingImg.png',
             title: '부부 & 커플상담',
             content: '부부, 커플의 관계성 향상을 위한 심리상담',
-          },
-          {
-            img: '/images/groupCounselingImg.png',
-            title: '집단 상담',
-            content: '공동의 주제에 대해 나누는 성장, 교육집단',
           },
         ],
         education: [
