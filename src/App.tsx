@@ -9,6 +9,7 @@ import EducationPage from './pages/EducationPage/EducationPage';
 import CounselorInfoPage from './pages/CounselorInfoPage/CounselorInfoPage';
 import ReservationPage from './pages/ReservationPage/ReservationPage';
 
+
 function App() {
   return (
     <div className="App">
