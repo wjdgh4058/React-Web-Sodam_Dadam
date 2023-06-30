@@ -351,7 +351,7 @@ function Template() {
           </tbody>
         </table>
         <div className="flex justify-end mt-12 mb-12 mxl:mt-8 mxl:mb-8">
-          <button className="px-8 py-3 text-xl bg-gray-200 mxl:px-6 mxl:py-2">확인</button>
+          <button className="px-6 py-2 text-xl bg-gray-200 mxl:px-6 mxl:py-2">확인</button>
         </div>
       </div>
     </>

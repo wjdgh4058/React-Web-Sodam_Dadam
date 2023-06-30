@@ -65,7 +65,7 @@ function Notification() {
       </div>
 
       <table className="w-full my-10 text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 bg-gray-100">
+        <thead className="text-xl text-gray-700 bg-gray-100">
           <tr>
             <th scope="col" className="px-6 py-3">
               번호
@@ -87,8 +87,8 @@ function Notification() {
         <tbody>
           {data &&
             data.map((item) => (
-              <tr className="text-black bg-white border-b" key={item.number}>
-                <td className="px-6 py-4">{item.number}</td>
+              <tr className="text-lg text-black bg-white border-b" key={item.number}>
+                <td className="px-6 py-4 ">{item.number}</td>
                 <td className="px-6 py-4 font-medium border whitespace-nowrap">{item.title}</td>
                 <td className="px-6 py-4 border">{item.writer}</td>
                 <td className="px-6 py-4 border">{item.date}</td>
@@ -97,6 +97,9 @@ function Notification() {
             ))}
         </tbody>
       </table>
+      <div className="flex justify-end mb-12 mmd:mb-6">
+        <button className="px-6 py-2 text-lg bg-gray-200 mxl:px-6 mxl:py-2">작성</button>
+      </div>
     </div>
   );
 }
