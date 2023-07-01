@@ -431,4 +431,96 @@ export const handlers = [
       }),
     );
   }),
+
+  rest.get('http://localhost:3000/noticeposts/search', (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        totalDataCount: 13,
+        totalPageCount: 2,
+        noticePost: [
+          {
+            noticeId: 2,
+            number: 1,
+            title: '안내 말씀 드립니다.',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 3,
+            number: 2,
+            title: '공지사항 2',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 3,
+          },
+          {
+            noticeId: 4,
+            number: 3,
+            title: '공지사항 3',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 5,
+            number: 4,
+            title: '공지사항 4',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 6,
+            number: 5,
+            title: '공지사항 5',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 7,
+            number: 6,
+            title: '공지사항 6',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 8,
+            number: 7,
+            title: '공지사항 7',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 9,
+            number: 8,
+            title: '공지사항 8',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 10,
+            number: 9,
+            title: '공지사항 9',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+          {
+            noticeId: 11,
+            number: 10,
+            title: '공지사항 10',
+            writer: '운영자',
+            noticeDate: '2023-06-23',
+            view: 0,
+          },
+        ],
+      }),
+    );
+  }),
 ];

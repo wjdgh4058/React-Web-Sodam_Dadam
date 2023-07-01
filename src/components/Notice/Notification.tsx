@@ -1,65 +1,12 @@
 import { useState } from 'react';
-
-const data = [
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-  {
-    number: 1,
-    title: '첫번째 공지입니다.',
-    writer: '운영자',
-    date: '2023-06-01',
-    views: 19,
-  },
-];
+import { useGetNoticeQuery } from './query/getNoticeQuery';
 
 function Notification() {
+  const [pageNumber, setPageNumber] = useState<number>(0);
+  const data = useGetNoticeQuery({ pageNumber: pageNumber });
+  const changePage = (index: number) => {
+    setPageNumber(index);
+  };
   const [showPopup, setShowPopup] = useState(false);
   const [adminId, setAdminId] = useState('');
   const [adminPassword, setPassword] = useState('');
@@ -86,6 +33,7 @@ function Notification() {
     setShowPopup(false);
     setIsIncorrectCredentials(false);
   };
+
   return (
     <div>
       <div className="w-[100%] h-96 overflow-hidden mb-12 mmd:mb-6">
@@ -114,17 +62,28 @@ function Notification() {
         </thead>
         <tbody>
           {data &&
-            data.map((item) => (
-              <tr className="text-lg text-black bg-white border-b" key={item.number}>
-                <td className="px-6 py-4 ">{item.number}</td>
+            data.data?.noticePost.map((item) => (
+              <tr className="text-black bg-white border-b" key={item.noticeId}>
+                <td className="px-6 py-4">{item.number}</td>
                 <td className="px-6 py-4 font-medium border whitespace-nowrap">{item.title}</td>
                 <td className="px-6 py-4 border">{item.writer}</td>
-                <td className="px-6 py-4 border">{item.date}</td>
-                <td className="px-6 py-4">{item.views}</td>
+                <td className="px-6 py-4 border">{item.noticeDate}</td>
+                <td className="px-6 py-4">{item.view}</td>
               </tr>
             ))}
         </tbody>
       </table>
+      <div className="flex justify-center w-full gap-5">
+        {data.data &&
+          Array.from({ length: data.data.totalPageCount }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => changePage(index)}
+              className="flex items-center px-3 py-2 font-medium text-gray-900 transition-colors bg-white border rounded select-none hover:border-blue-600 hover:bg-black hover:text-white">
+              {index + 1}
+            </button>
+          ))}
+      </div>
       <div className="flex justify-end mb-10 mmd:mb-5">
         <button className="px-6 py-2 text-lg bg-gray-200 mxl:px-6 mxl:py-2" onClick={openPopup}>
           작성
