@@ -54,7 +54,7 @@ function Template() {
       /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     emailRegex.test(newInputState.email) ? setIsEmail(false) : setIsEmail(true);
 
-    const phoneNumberRegex = /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/;
+    const phoneNumberRegex = /^01(?:0|1|[6-9])(?:\d{4}|\d{4})\d{4}$/;
     phoneNumberRegex.test(newInputState.phoneNumber) ? setIsPhone(false) : setIsPhone(true);
 
     setInputState(newInputState);

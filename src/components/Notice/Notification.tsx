@@ -66,14 +66,14 @@ function Notification() {
   const [isIncorrectCredentials, setIsIncorrectCredentials] = useState(false);
 
   const adminCredentials = {
-    id: 'admin',
-    password: 'password123',
+    id: '1',
+    password: '1',
   };
 
   const authenticateAdmin = () => {
     if (adminId === adminCredentials.id && adminPassword === adminCredentials.password) {
       setIsIncorrectCredentials(false);
-      window.location.href = '/create';
+      window.location.href = '/Bulletin/1';
     } else {
       setIsIncorrectCredentials(true);
     }

@@ -209,6 +209,13 @@ export const handlers = [
           listImg: '../../../public/images/centerInfoImg.png',
           listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
         },
+        {
+          url: '/Bulletin',
+          listName: '공지 작성',
+          listItem: ['공지작성'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
       ]),
     );
   }),

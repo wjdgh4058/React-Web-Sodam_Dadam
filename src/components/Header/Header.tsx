@@ -43,7 +43,7 @@ function Header() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
             <div className="relative flex ml-auto mr-auto max-w-screen-2xl ">
-              {listData.map((item, index) => (
+              {listData.slice(0, 5).map((item, index) => (
                 <HeaderNavList headerList={item} key={index} />
               ))}
             </div>
@@ -52,7 +52,7 @@ function Header() {
                 menuVisible ? 'h-40' : 'h-0'
               } transition-height duration-[400ms] ease-in-out overflow-hidden z-10`}>
               <div className="flex ml-auto mr-auto max-w-screen-2xl">
-                {listData.map((item, index) => {
+                {listData.slice(0, 5).map((item, index) => {
                   return (
                     <div className="inset-x-0 z-20 flex flex-col h-0 gap-2 mt-4 basis-1/5" key={index}>
                       {item.listItem.slice(0, 3).map((listName, index) => {

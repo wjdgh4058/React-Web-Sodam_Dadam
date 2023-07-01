@@ -7,7 +7,8 @@ function MainBox({ data, name }: IMainBoxType) {
       <div className="text-3xl font-semibold text-center mlg:text-xl">
         <span className="pb-4 border-b-2 border-gray-400">{name}</span>
       </div>
-      <div className={`flex w-full mt-20 flex-nowrap mlg:mt-12 ${name === '심리 상담' ? 'gap-2' : 'gap-8'}`}>
+      <div
+        className={`flex w-full mt-20 flex-nowrap mlg:mt-12 ${name === '심리 상담' ? 'gap-2' : 'gap-16 mlg:gap-12'}`}>
         {data.map((item: IMainCardType) => (
           <MainCard title={item.title} content={item.content} img={item.img} name={name} />
         ))}

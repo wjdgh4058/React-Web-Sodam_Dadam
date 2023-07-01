@@ -16,6 +16,7 @@ import AdolescentsParents from '../Counseling/AdolescentsParents';
 import BookReading from '../Education/BookReading';
 import WorkShop from '../Education/WorkShop';
 import CounselingEducation from '../Education/CounselingEducation';
+import Bulletin from '../Bulletin/Bulletin';
 
 function NavListContent({ itemData, listName }: { itemData: Array<string>; listName: string }) {
   const { id } = useParams<{ id: string }>();
@@ -41,6 +42,7 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '심리교육' && id === '1' && <WorkShop />}
       {listName === '심리교육' && id === '2' && <CounselingEducation />}
       {listName === '심리교육' && id === '3' && <BookReading />}
+      {listName === '공지 작성' && id === '1' && <Bulletin />}
     </div>
   );
 }
