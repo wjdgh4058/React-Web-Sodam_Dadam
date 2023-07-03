@@ -211,8 +211,8 @@ export const handlers = [
         },
         {
           url: '/Bulletin',
-          listName: '공지 작성',
-          listItem: ['공지글 작성'],
+          listName: '게시글 작성',
+          listItem: ['공지글 작성', '이벤트 작성'],
           listImg: '../../../public/images/centerInfoImg.png',
           listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
         },
