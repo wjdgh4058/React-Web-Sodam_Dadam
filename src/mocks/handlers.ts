@@ -28,7 +28,7 @@ export const handlers = [
           {
             img: '/images/psychologicalTestImg.png',
             title: '심리 검사',
-            content: '개인 맞춤형 심리검사를 선정하여 심층적 자기 이해',
+            content: '맞춤형 심리검사를 선정하여 심층적 자기 이해',
           },
           {
             img: '/images/teenagerAndParentCounselingImg.png',
