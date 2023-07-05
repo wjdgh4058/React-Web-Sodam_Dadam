@@ -37,7 +37,7 @@ function Header() {
                   <p className="font-semibold text-gray-500 mlg:text-sm">심리상담센터</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 mxl:text-xs">SODA COUNSELING CENTER</p>
+                  <p className="text-xs text-gray-400 mlg:text-xs">SODA COUNSELING CENTER</p>
                 </div>
               </div>
             </Link>
