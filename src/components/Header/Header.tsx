@@ -23,7 +23,7 @@ function Header() {
   return (
     <>
       {listData && (
-        <header className="sticky top-[-90px] bg-white z-10">
+        <header className="sticky top-[-57px] bg-white z-10 mlg:top-[-46px]">
           <div className="flex justify-center mt-4 mb-4 mlg:mt-2 mlg:mb-2">
             <Link to={'/'} className="inline-flex flex-row flex-nowrap">
               <img

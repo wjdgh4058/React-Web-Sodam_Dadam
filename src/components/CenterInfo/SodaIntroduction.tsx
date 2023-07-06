@@ -15,14 +15,14 @@ function SodaIntroduction() {
     <>
       {sodaInfoData && (
         <div>
-          <div className="mt-12 text-3xl text-blue-900 mxl:text-2xl mmd:mt-6">{sodaInfoData.headText}</div>
-          <div className="w-[100%] h-96 overflow-hidden mb-12 mmd:mb-6">
-            <img src={sodaInfoData.img} alt={sodaInfoData.alt} className="mt-12 mmd:mt-6" />
+          <div className="mt-8 text-xl text-blue-900 mmd:text-lg mmd:mt-4">{sodaInfoData.headText}</div>
+          <div className="w-[100%] h-80 overflow-hidden mb-8 mmd:mb-4 mmd:h-40">
+            <img src={sodaInfoData.img} alt={sodaInfoData.alt} className="mt-8 mmd:mt-4" />
           </div>
           <ul>
             {sodaInfoData.content.map((item, index) => {
               return (
-                <li key={index} className="mb-12 text-2xl mxl:text-xl">
+                <li key={index} className="mb-8 text-base mmd:text-sm">
                   • {item}
                 </li>
               );
