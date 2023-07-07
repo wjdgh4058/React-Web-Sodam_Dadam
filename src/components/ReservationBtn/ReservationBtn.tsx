@@ -14,7 +14,7 @@ function ReservationBtn() {
       <div className="flex justify-center my-8 mmd:my-4">
         <Link
           to={'/Reservation'}
-          className="px-8 leading-[3.5] text-white bg-blue-800 mmd:px-6 mmd:leading-[3] mmd:text-sm">
+          className="px-2 leading-[3] text-sm text-white bg-blue-800 mmd:leading-[3] mmd:text-xs">
           온라인 상담예약하기 ▶︎
         </Link>
       </div>

@@ -30,9 +30,6 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '센터 안내' && id === '1' && <SodaIntroduction />}
       {listName === '센터 안내' && id === '2' && <ReservationInfo />}
       {listName === '센터 안내' && id === '3' && <SodaWayToCome />}
-      {listName === '공지 ・ 문의' && id === '1' && <Notification />}
-      {listName === '공지 ・ 문의' && id === '2' && <Event />}
-      {listName === '공지 ・ 문의' && id === '3' && <Inquiry />}
       {listName === '상담전문가 소개' && id === '1' && <MainCounselor />}
       {listName === '상담전문가 소개' && id === '2' && <SubCounselor />}
       {listName === '심리상담' && id === '1' && <Personal />}
@@ -45,6 +42,9 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '심리교육' && id === '3' && <BookReading />}
       {listName === '게시글 작성' && id === '1' && <CreateNotice />}
       {listName === '게시글 작성' && id === '2' && <CreateEvent />}
+      {listName === '공지 ・ 문의' && id === '1' && <Notification />}
+      {listName === '공지 ・ 문의' && id === '2' && <Event />}
+      {listName === '공지 ・ 문의' && id === '3' && <Inquiry />}
     </div>
   );
 }

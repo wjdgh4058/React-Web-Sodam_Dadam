@@ -43,7 +43,7 @@ function Header() {
             </Link>
           </div>
           <ul
-            className="pt-2 pb-2 border-t border-b border-stone-950 mlg:pt-1 mlg:pb-1"
+            className="pt-2 pb-2 border-t border-b mlg:pt-1 mlg:pb-1"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
             <div className="relative flex max-w-screen-xl ml-auto mr-auto ">

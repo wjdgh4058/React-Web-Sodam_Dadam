@@ -28,14 +28,14 @@ function SodaIntroduction() {
               );
             })}
           </ul>
-          <div className="flex justify-between gap-4 mb-12 mxl:flex-col mxl:items-center ">
+          <div className="flex justify-between gap-4 mb-12 mmd:flex-col mmd:items-center ">
             {sodaInfoData.detailImg.map((imgAdress, index) => {
               return (
                 <img
                   src={imgAdress}
                   alt="사무실 내부 사진"
                   key={index}
-                  className="max-w-[30%] mxl:max-w-4xl mxl:max-h-4xl max-h-xs w-[100%]"
+                  className="max-w-[30%] mmd:max-w-4xl mmd:max-h-4xl max-h-xs w-[100%]"
                 />
               );
             })}
