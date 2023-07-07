@@ -3,6 +3,9 @@ import SodaIntroduction from '../CenterInfo/SodaIntroduction';
 import NavListCurrentLocation from './NavListCurrentLocation';
 import SodaWayToCome from '../CenterInfo/SodaWayToCome';
 import { useParams } from 'react-router-dom';
+import Notification from '../Notice/Notification';
+import Inquiry from '../Notice/Inquiry';
+import Event from '../Notice/Event';
 import MainCounselor from '../CounselorInfo/MainCounselor';
 import SubCounselor from '../CounselorInfo/SubCounselor';
 import Personal from '../Counseling/Personal';
@@ -13,13 +16,15 @@ import AdolescentsParents from '../Counseling/AdolescentsParents';
 import BookReading from '../Education/BookReading';
 import WorkShop from '../Education/WorkShop';
 import CounselingEducation from '../Education/CounselingEducation';
+import CreateNotice from '../Bulletin/CreateNotice';
+import CreateEvent from '../Bulletin/CreateEvent';
 
 function NavListContent({ itemData, listName }: { itemData: Array<string>; listName: string }) {
   const { id } = useParams<{ id: string }>();
   return (
     <div className="flex flex-col w-[100%]">
       <div className="flex justify-between pb-4 border-b-2">
-        <div className="xl:text-3xl mxl:text-2xl">{itemData[Number(id) - 1]}</div>
+        <div className="text-lg mmd:text-base">{itemData[Number(id) - 1]}</div>
         <NavListCurrentLocation />
       </div>
       {listName === '센터 안내' && id === '1' && <SodaIntroduction />}
@@ -35,6 +40,11 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '심리교육' && id === '1' && <WorkShop />}
       {listName === '심리교육' && id === '2' && <CounselingEducation />}
       {listName === '심리교육' && id === '3' && <BookReading />}
+      {listName === '공지 ・ 문의' && id === '1' && <Notification />}
+      {listName === '공지 ・ 문의' && id === '2' && <Event />}
+      {listName === '공지 ・ 문의' && id === '3' && <Inquiry />}
+      {listName === '게시글 작성' && id === '1' && <CreateNotice />}
+      {listName === '게시글 작성' && id === '2' && <CreateEvent />}
     </div>
   );
 }
