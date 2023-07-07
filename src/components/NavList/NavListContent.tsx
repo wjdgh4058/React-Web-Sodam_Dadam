@@ -40,11 +40,11 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '심리교육' && id === '1' && <WorkShop />}
       {listName === '심리교육' && id === '2' && <CounselingEducation />}
       {listName === '심리교육' && id === '3' && <BookReading />}
-      {listName === '게시글 작성' && id === '1' && <CreateNotice />}
-      {listName === '게시글 작성' && id === '2' && <CreateEvent />}
       {listName === '공지 ・ 문의' && id === '1' && <Notification />}
       {listName === '공지 ・ 문의' && id === '2' && <Event />}
       {listName === '공지 ・ 문의' && id === '3' && <Inquiry />}
+      {listName === '게시글 작성' && id === '1' && <CreateNotice />}
+      {listName === '게시글 작성' && id === '2' && <CreateEvent />}
     </div>
   );
 }
